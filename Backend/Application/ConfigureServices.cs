@@ -1,6 +1,8 @@
-﻿using Application.Common.Mapings;
+﻿using Application.Common.Behaviours;
+using Application.Common.Mapings;
 using AutoMapper;
 using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -19,6 +21,9 @@ namespace Application
             {
                 config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
             });
+
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 
             var mapperConfig = new MapperConfiguration(mc =>
             {
