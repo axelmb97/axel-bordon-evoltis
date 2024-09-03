@@ -1,4 +1,5 @@
-﻿using Application.Employees.Dtos;
+﻿using Application.Common.Models;
+using Application.Employees.Dtos;
 using Application.Products.Dtos;
 using Application.PurchaseOrderDetails.Dtos;
 using Application.PurchaseOrders.Commands.CreatePurchaseOrder;
@@ -35,6 +36,12 @@ namespace Application.Common.Mapings
             CreateMap<CreatePurchaseOrderDetailDto, PurchaseOrderDetailEntity>()
                  .ForMember(dest => dest.ProductEntityId, opts => opts.MapFrom(src => src.ProductId))
                 .ReverseMap();  
+
+            CreateMap<Pagination<PurchaseOrderDetailEntity>, PaginatedPurchaseOrderDetailsDto>()
+                .ForMember(dest => dest.Items, opts => opts.MapFrom(src => src.Items))
+                .ReverseMap();
+
+            CreateMap<PurchaseOrderDetailEntity, PurchaseOrderDetailDto>().ReverseMap();
             
         }
     }

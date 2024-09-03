@@ -19,7 +19,7 @@ namespace Infraestructure
             services.AddScoped<ISupplierRepository, SupplierRepository>();
             services.AddScoped<IPurchaseOrderDetailRepository, PurchaseOrderDetailRepository>();
             services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
-
+            services.AddScoped<IUnitOfWork, UnitOfWork>();  
             return services;
         }
     }

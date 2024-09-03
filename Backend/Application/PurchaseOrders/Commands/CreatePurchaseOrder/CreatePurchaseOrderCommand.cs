@@ -33,7 +33,8 @@ namespace Application.PurchaseOrders.Commands.CreatePurchaseOrder
         public CreatePurchaseOrderCommandHandler(
             IPurchaseOrderRepository purchaseOrderRepository, 
             IUnitOfWork unitOfWork, 
-            IMapper mapper)
+            IMapper mapper
+            )
         {
             _purchaseOrderRepository = purchaseOrderRepository;
             _unitOfWork = unitOfWork;

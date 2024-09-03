@@ -31,6 +31,7 @@ namespace Infraestructure.Persistence.Repositories
 
         private IQueryable<PurchaseOrderDetailEntity> GetQuery(PurchaseOrderDetailFilters filters) { 
             var query = _dbContext.PurchaseOrderDetails.AsQueryable();
+            query = query.Where(d => d.PurchaseOrderEntityId.Equals(filters.PurchaseOrderId)).Include(d => d.Product);
 
             if (filters.QuantityGreaterThan is not null && filters.QuantityLessThan is not null)
             {
