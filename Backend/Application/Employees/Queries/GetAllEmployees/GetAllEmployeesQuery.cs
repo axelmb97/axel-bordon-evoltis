@@ -10,9 +10,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Employees.Queries
+namespace Application.Employees.Queries.GetAllEmployees
 {
-    public class GetAllEmployeesQuery : IRequest<ApiResponseDto>{ }
+    public class GetAllEmployeesQuery : IRequest<ApiResponseDto> { }
 
     public class GetAllEmployeesQueryHandler : IRequestHandler<GetAllEmployeesQuery, ApiResponseDto>
     {

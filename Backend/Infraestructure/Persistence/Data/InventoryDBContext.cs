@@ -23,5 +23,10 @@ namespace Infraestructure.Persistence.Data
         public DbSet<ReceptionEntity> Receptions { get; set; }
         public DbSet<StockEntity> Stocks { get; set; }
         public DbSet<SupplierEntity> Suppliers { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            ModelBuilderExtensions.Seed(modelBuilder);
+        }
     }
 }
