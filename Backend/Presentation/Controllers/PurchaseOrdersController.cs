@@ -1,5 +1,7 @@
 ﻿using Application.PurchaseOrderDetails.Queries;
 using Application.PurchaseOrders.Commands.CreatePurchaseOrder;
+using Application.PurchaseOrders.Commands.DeletePurchaseOrder;
+using Application.PurchaseOrders.Commands.UpdatePurchaseOrder;
 using Application.PurchaseOrders.Queries.GetFilteredPurchaseOrders;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -34,6 +36,20 @@ namespace Presentation.Controllers
 
         [HttpPost]
         public async Task<IActionResult> PostPurchaseOrder([FromBody] CreatePurchaseOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> PutPurchaseOrder([FromBody] UpdatePurchaseOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePurchaseOrder([FromRoute] DeletePurchaseOrderCommand command)
         {
             var result = await _mediator.Send(command);
             return StatusCode(result.StatusCode, result);

@@ -3,6 +3,7 @@ using Application.Employees.Dtos;
 using Application.Products.Dtos;
 using Application.PurchaseOrderDetails.Dtos;
 using Application.PurchaseOrders.Commands.CreatePurchaseOrder;
+using Application.PurchaseOrders.Commands.UpdatePurchaseOrder;
 using Application.PurchaseOrders.Dto;
 using Application.Suppliers.Dtos;
 using AutoMapper;
@@ -40,6 +41,9 @@ namespace Application.Common.Mapings
                 .ForMember(dest => dest.Items, opts => opts.MapFrom(src => src.Items))
                 .ReverseMap();
 
+            CreateMap<UpdatePurchaseOrderCommand, PurchaseOrderEntity>()
+               .ForMember(dest => dest.SupplierEntityId, opts => opts.MapFrom(src => src.SupplierId))
+               .ReverseMap();
             //PURCHASE ORDER DETAILS
             CreateMap<CreatePurchaseOrderDetailDto, PurchaseOrderDetailEntity>()
                  .ForMember(dest => dest.ProductEntityId, opts => opts.MapFrom(src => src.ProductId))
@@ -50,7 +54,12 @@ namespace Application.Common.Mapings
                 .ReverseMap();
 
             CreateMap<PurchaseOrderDetailEntity, PurchaseOrderDetailDto>().ReverseMap();
-            
+
+            CreateMap<UpdatePurchaseOrderDetailDto, PurchaseOrderDetailEntity>()
+               .ForMember(dest => dest.ProductEntityId, opts => opts.MapFrom(src => src.ProductId))
+               .ForMember(dest => dest.ModifiedAt, opts => opts.MapFrom(src => DateTime.Now))
+               .ReverseMap();
+
         }
     }
 }
