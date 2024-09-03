@@ -1,7 +1,72 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\stockentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\stockentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\infraestructure\\persistence\\data\\inventorydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\persistence\\data\\inventorydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\infraestructure\\configureservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\configureservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\configureservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\configureservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\common\\mapings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\common\\mapings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\supplierentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\supplierentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\receptionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\receptionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\receptiondetailentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\receptiondetailentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\purchaseorderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\purchaseorderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\purchaseorderdetailentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\purchaseorderdetailentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\productentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\productentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\employeeentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\employeeentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +91,214 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InventoryDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Data\\InventoryDBContext.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Data\\InventoryDBContext.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Data\\InventoryDBContext.cs",
+              "RelativeToolTip": "Infraestructure\\Persistence\\Data\\InventoryDBContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:31:55.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Presentation\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\appsettings.Development.json",
+              "RelativeToolTip": "Presentation\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-03T01:30:05.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:28:57.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StockEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\StockEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\StockEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\StockEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\StockEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:13:07.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\appsettings.json",
+              "RelativeToolTip": "Presentation\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-03T01:30:00.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConfigureServices.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\ConfigureServices.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\ConfigureServices.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\ConfigureServices.cs",
+              "RelativeToolTip": "Infraestructure\\ConfigureServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:23:52.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Mapings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Mapings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Mapings\\MappingProfile.cs",
+              "RelativeToolTip": "Application\\Common\\Mapings\\MappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:22:37.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConfigureServices.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\ConfigureServices.cs",
+              "RelativeDocumentMoniker": "Application\\ConfigureServices.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\ConfigureServices.cs",
+              "RelativeToolTip": "Application\\ConfigureServices.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:17:26.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PurchaseOrderEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\PurchaseOrderEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\PurchaseOrderEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\PurchaseOrderEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\PurchaseOrderEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:09:14.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReceptionDetailEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\ReceptionDetailEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\ReceptionDetailEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\ReceptionDetailEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\ReceptionDetailEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:12:38.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReceptionEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\ReceptionEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\ReceptionEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\ReceptionEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\ReceptionEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:11:57.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SupplierEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\SupplierEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\SupplierEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\SupplierEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\SupplierEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:08:34.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:05:14.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PurchaseOrderDetailEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\PurchaseOrderDetailEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\PurchaseOrderDetailEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\PurchaseOrderDetailEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\PurchaseOrderDetailEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:10:39.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\ProductEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\ProductEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\ProductEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\ProductEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:07:32.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmployeeEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\EmployeeEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\EmployeeEntity.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\EmployeeEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\EmployeeEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:06:36.92Z",
+              "EditorCaption": ""
             }
           ]
         }
