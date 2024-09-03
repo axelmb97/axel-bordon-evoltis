@@ -17,7 +17,7 @@ namespace Infraestructure
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ISupplierRepository, SupplierRepository>();
-
+            services.AddScoped<IPurchaseOrderDetailRepository, PurchaseOrderDetailRepository>();
             return services;
         }
     }
