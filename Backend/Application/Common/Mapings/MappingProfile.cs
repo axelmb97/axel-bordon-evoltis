@@ -3,6 +3,7 @@ using Application.Employees.Dtos;
 using Application.Products.Dtos;
 using Application.PurchaseOrderDetails.Dtos;
 using Application.PurchaseOrders.Commands.CreatePurchaseOrder;
+using Application.PurchaseOrders.Dto;
 using Application.Suppliers.Dtos;
 using AutoMapper;
 using Domain.Entities;
@@ -30,6 +31,13 @@ namespace Application.Common.Mapings
             //PURCHASE ORDERS
             CreateMap<CreatePurchaseOrderCommand, PurchaseOrderEntity>()
                 .ForMember(dest => dest.SupplierEntityId, opt => opt.MapFrom(src => src.SupplierId))
+                .ReverseMap();
+
+            CreateMap<PurchaseOrderEntity, PurchaseOrderDto>().ReverseMap();
+
+
+            CreateMap<Pagination<PurchaseOrderEntity>, PaginatedPurchasesDto>()
+                .ForMember(dest => dest.Items, opts => opts.MapFrom(src => src.Items))
                 .ReverseMap();
 
             //PURCHASE ORDER DETAILS

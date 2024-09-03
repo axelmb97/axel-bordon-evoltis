@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\infraestructure\\persistence\\repositories\\purchaseorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\persistence\\repositories\\purchaseorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\presentation\\controllers\\purchaseorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\purchaseorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\common\\interfaces\\repositories\\ipurchaseorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\repositories\\ipurchaseorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\infraestructure\\persistence\\repositories\\purchaseorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\persistence\\repositories\\purchaseorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\common\\mapings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\common\\mapings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\purchaseorders\\dto\\paginatedpurchasesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\purchaseorders\\dto\\paginatedpurchasesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\purchaseorders\\queries\\getfilteredpurchaseorders\\getfilteredpurchaseordersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\purchaseorders\\queries\\getfilteredpurchaseorders\\getfilteredpurchaseordersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\purchaseorders\\dto\\purchaseorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\purchaseorders\\dto\\purchaseorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\common\\interfaces\\repositories\\ipurchaseorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\repositories\\ipurchaseorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\purchaseorders\\dto\\purchaseorderfiltersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\purchaseorders\\dto\\purchaseorderfiltersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\purchaseorderdetails\\queries\\getfilteredpurchaseorderdetailsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\purchaseorderdetails\\queries\\getfilteredpurchaseorderdetailsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\common\\mapings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\common\\mapings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\infraestructure\\persistence\\repositories\\purchaseorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\persistence\\repositories\\purchaseorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\common\\interfaces\\repositories\\ipurchaseorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\repositories\\ipurchaseorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\purchaseorderdetails\\dtos\\purchaseorderdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,18 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\presentation\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\presentation\\controllers\\purchaseorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C917E2C1-3C01-4E88-9F42-2AEA62F056F6}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\purchaseorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\infraestructure\\persistence\\repositories\\purchaseorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69B04707-7791-4E5B-B598-A02947FA6917}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\persistence\\repositories\\purchaseorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\application\\common\\interfaces\\repositories\\ipurchaseorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A73C0900-1B24-4623-BF0B-C19C5C042C22}|Application\\Application.csproj|solutionrelative:application\\common\\interfaces\\repositories\\ipurchaseorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CC30E33-A3BD-46DA-8FF4-9B9B49F9CFBE}|Domain\\Domain.csproj|c:\\users\\usuario\\desktop\\evoltis\\backend\\domain\\entities\\purchaseorderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -199,32 +215,127 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "PaginatedPurchasesDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Dto\\PaginatedPurchasesDto.cs",
+              "RelativeDocumentMoniker": "Application\\PurchaseOrders\\Dto\\PaginatedPurchasesDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Dto\\PaginatedPurchasesDto.cs",
+              "RelativeToolTip": "Application\\PurchaseOrders\\Dto\\PaginatedPurchasesDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T12:11:30.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Mapings\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Mapings\\MappingProfile.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Mapings\\MappingProfile.cs",
               "RelativeToolTip": "Application\\Common\\Mapings\\MappingProfile.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACsAAABYAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAgwCkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-03T02:08:11.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "PurchaseOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\PurchaseOrderRepository.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Repositories\\PurchaseOrderRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\PurchaseOrderRepository.cs",
+              "RelativeToolTip": "Infraestructure\\Persistence\\Repositories\\PurchaseOrderRepository.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwC0AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T11:46:12.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PurchaseOrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Controllers\\PurchaseOrdersController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\PurchaseOrdersController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Controllers\\PurchaseOrdersController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\PurchaseOrdersController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAUwBcAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T11:48:37.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetFilteredPurchaseOrdersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Queries\\GetFilteredPurchaseOrders\\GetFilteredPurchaseOrdersQuery.cs",
+              "RelativeDocumentMoniker": "Application\\PurchaseOrders\\Queries\\GetFilteredPurchaseOrders\\GetFilteredPurchaseOrdersQuery.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Queries\\GetFilteredPurchaseOrders\\GetFilteredPurchaseOrdersQuery.cs",
+              "RelativeToolTip": "Application\\PurchaseOrders\\Queries\\GetFilteredPurchaseOrders\\GetFilteredPurchaseOrdersQuery.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAUwCQAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T12:07:50.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PurchaseOrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Dto\\PurchaseOrderDto.cs",
+              "RelativeDocumentMoniker": "Application\\PurchaseOrders\\Dto\\PurchaseOrderDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Dto\\PurchaseOrderDto.cs",
+              "RelativeToolTip": "Application\\PurchaseOrders\\Dto\\PurchaseOrderDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T12:12:05.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PurchaseOrderFiltersDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Dto\\PurchaseOrderFiltersDto.cs",
+              "RelativeDocumentMoniker": "Application\\PurchaseOrders\\Dto\\PurchaseOrderFiltersDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Dto\\PurchaseOrderFiltersDto.cs",
+              "RelativeToolTip": "Application\\PurchaseOrders\\Dto\\PurchaseOrderFiltersDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T12:08:23.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IPurchaseOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderRepository.cs",
+              "RelativeToolTip": "Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T11:40:14.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GetFilteredPurchaseOrderDetailsQuery.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrderDetails\\Queries\\GetFilteredPurchaseOrderDetailsQuery.cs",
               "RelativeDocumentMoniker": "Application\\PurchaseOrderDetails\\Queries\\GetFilteredPurchaseOrderDetailsQuery.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrderDetails\\Queries\\GetFilteredPurchaseOrderDetailsQuery.cs",
               "RelativeToolTip": "Application\\PurchaseOrderDetails\\Queries\\GetFilteredPurchaseOrderDetailsQuery.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAywCEAAABZAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAywB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-03T11:13:32.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "IPurchaseOrderDetailRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderDetailRepository.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderDetailRepository.cs",
@@ -237,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "PurchaseOrderDetailRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\PurchaseOrderDetailRepository.cs",
               "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Repositories\\PurchaseOrderDetailRepository.cs",
@@ -249,12 +360,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "ProductDto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Products\\Dtos\\ProductDto.cs",
               "RelativeDocumentMoniker": "Application\\Products\\Dtos\\ProductDto.cs",
@@ -267,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "PurchaseOrderDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrderDetails\\Dtos\\PurchaseOrderDetailDto.cs",
               "RelativeDocumentMoniker": "Application\\PurchaseOrderDetails\\Dtos\\PurchaseOrderDetailDto.cs",
@@ -280,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "UnhandledExceptionBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Behaviours\\UnhandledExceptionBehaviour.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Behaviours\\UnhandledExceptionBehaviour.cs",
@@ -293,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "PaginatedPurchaseOrderDetailsDto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrderDetails\\Dtos\\PaginatedPurchaseOrderDetailsDto.cs",
               "RelativeDocumentMoniker": "Application\\PurchaseOrderDetails\\Dtos\\PaginatedPurchaseOrderDetailsDto.cs",
@@ -306,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "CreatePurchaseOrderCommand.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Commands\\CreatePurchaseOrder\\CreatePurchaseOrderCommand.cs",
               "RelativeDocumentMoniker": "Application\\PurchaseOrders\\Commands\\CreatePurchaseOrder\\CreatePurchaseOrderCommand.cs",
@@ -319,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "ConfigureServices.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\ConfigureServices.cs",
               "RelativeDocumentMoniker": "Infraestructure\\ConfigureServices.cs",
@@ -332,7 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "CreatePurchaseOrderCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrders\\Commands\\CreatePurchaseOrder\\CreatePurchaseOrderCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\PurchaseOrders\\Commands\\CreatePurchaseOrder\\CreatePurchaseOrderCommandValidator.cs",
@@ -345,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Program.cs",
               "RelativeDocumentMoniker": "Presentation\\Program.cs",
@@ -358,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Repositories\\UnitOfWork.cs",
@@ -371,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\ProductsController.cs",
@@ -384,46 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PurchaseOrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Controllers\\PurchaseOrdersController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Controllers\\PurchaseOrdersController.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Controllers\\PurchaseOrdersController.cs",
-              "RelativeToolTip": "Presentation\\Controllers\\PurchaseOrdersController.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAUwA4AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T11:48:37.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PurchaseOrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\PurchaseOrderRepository.cs",
-              "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Repositories\\PurchaseOrderRepository.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\PurchaseOrderRepository.cs",
-              "RelativeToolTip": "Infraestructure\\Persistence\\Repositories\\PurchaseOrderRepository.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAYwCQAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T11:46:12.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IPurchaseOrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderRepository.cs",
-              "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderRepository.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderRepository.cs",
-              "RelativeToolTip": "Application\\Common\\Interfaces\\Repositories\\IPurchaseOrderRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T11:40:14.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "PurchaseOrderEntity.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Domain\\Entities\\PurchaseOrderEntity.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\PurchaseOrderEntity.cs",
@@ -436,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "CreatePurchaseOrderDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrderDetails\\Dtos\\CreatePurchaseOrderDetailDto.cs",
               "RelativeDocumentMoniker": "Application\\PurchaseOrderDetails\\Dtos\\CreatePurchaseOrderDetailDto.cs",
@@ -449,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "PurchaseOrderDetailFilters.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\PurchaseOrderDetails\\Dtos\\PurchaseOrderDetailFilters.cs",
               "RelativeDocumentMoniker": "Application\\PurchaseOrderDetails\\Dtos\\PurchaseOrderDetailFilters.cs",
@@ -462,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Pagination.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Models\\Pagination.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Models\\Pagination.cs",
@@ -475,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Presentation\\appsettings.Development.json",
@@ -488,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "InventoryDBContext.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Data\\InventoryDBContext.cs",
               "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Data\\InventoryDBContext.cs",
@@ -500,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "ModelBuilderExtensions.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Data\\ModelBuilderExtensions.cs",
               "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Data\\ModelBuilderExtensions.cs",
@@ -512,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "Infraestructure.csproj",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Infraestructure.csproj",
               "RelativeDocumentMoniker": "Infraestructure\\Infraestructure.csproj",
@@ -524,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "SupplierRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\SupplierRepository.cs",
               "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Repositories\\SupplierRepository.cs",
@@ -536,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Repositories\\ProductRepository.cs",
@@ -548,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "EmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Infraestructure\\Persistence\\Repositories\\EmployeeRepository.cs",
               "RelativeDocumentMoniker": "Infraestructure\\Persistence\\Repositories\\EmployeeRepository.cs",
@@ -560,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "SuppliersController.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Controllers\\SuppliersController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\SuppliersController.cs",
@@ -572,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "GetAllSuppliersQuery.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Suppliers\\Queries\\GetAllSuppliers\\GetAllSuppliersQuery.cs",
               "RelativeDocumentMoniker": "Application\\Suppliers\\Queries\\GetAllSuppliers\\GetAllSuppliersQuery.cs",
@@ -584,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "SupplierDto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Suppliers\\Dtos\\SupplierDto.cs",
               "RelativeDocumentMoniker": "Application\\Suppliers\\Dtos\\SupplierDto.cs",
@@ -596,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "ConfigureServices.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\ConfigureServices.cs",
               "RelativeDocumentMoniker": "Application\\ConfigureServices.cs",
@@ -608,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "EmployeesController.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Presentation\\Controllers\\EmployeesController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\EmployeesController.cs",
@@ -620,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "GetAllProductsQuery.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Products\\Queries\\GetAllProducts\\GetAllProductsQuery.cs",
               "RelativeDocumentMoniker": "Application\\Products\\Queries\\GetAllProducts\\GetAllProductsQuery.cs",
@@ -632,7 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "GetAllEmployeesQuery.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Employees\\Queries\\GetAllEmployees\\GetAllEmployeesQuery.cs",
               "RelativeDocumentMoniker": "Application\\Employees\\Queries\\GetAllEmployees\\GetAllEmployeesQuery.cs",
@@ -644,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Repositories\\IUnitOfWork.cs",
@@ -656,7 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "ISupplierRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\ISupplierRepository.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Repositories\\ISupplierRepository.cs",
@@ -668,7 +736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "EmployeeDto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Employees\\Dtos\\EmployeeDto.cs",
               "RelativeDocumentMoniker": "Application\\Employees\\Dtos\\EmployeeDto.cs",
@@ -680,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\IProductRepository.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Repositories\\IProductRepository.cs",
@@ -692,7 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "IEmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Interfaces\\Repositories\\IEmployeeRepository.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Interfaces\\Repositories\\IEmployeeRepository.cs",
@@ -704,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "ValidationBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Behaviours\\ValidationBehaviour.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Behaviours\\ValidationBehaviour.cs",
@@ -716,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "ValidationException.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Exceptions\\ValidationException.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Exceptions\\ValidationException.cs",
@@ -728,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "ApiResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\EVOLTIS\\Backend\\Application\\Common\\Models\\ApiResponseDto.cs",
               "RelativeDocumentMoniker": "Application\\Common\\Models\\ApiResponseDto.cs",

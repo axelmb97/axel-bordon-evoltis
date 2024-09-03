@@ -1,5 +1,6 @@
 ﻿using Application.PurchaseOrderDetails.Queries;
 using Application.PurchaseOrders.Commands.CreatePurchaseOrder;
+using Application.PurchaseOrders.Queries.GetFilteredPurchaseOrders;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,13 @@ namespace Presentation.Controllers
         public PurchaseOrdersController(ISender mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetPurchasesOrders([FromQuery] GetFilteredPurchaseOrdersQuery query)
+        {
+            var result = await _mediator.Send(query);
+            return StatusCode(result.StatusCode, result);
         }
 
         [HttpGet("{purchase_order_id}/details")]
