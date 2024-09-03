@@ -1,0 +1,109 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.vspscc
+*.vssscc
+.vscode/
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Scaffolding
+.scaffolding/
+
+# Rider
+.idea/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Additional files
+.DS_Store
+*.log
+*.sql
+*.sqlite
+*.pdb
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+
+# Include only if you have the NuGet dependencies stored in the solution directory
+#!packages.config
+
+# Uncomment if using Xamarin.iOS to ignore temporary build files
+#*.ipa
+#*.app
+#*.dSYM.zip
+#*.dSYM
+
+# Uncomment if using Xamarin.Android to ignore temporary build files
+#*.apk
+#*.ap_
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+_coverage/
+*.testlog
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# MSTest test Results
+TestResults/
+*.trx
+*.VisualState.xml
+
+# Build results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+*.rptproj.rsuser
+*- [Deployment]/
+
+# Microsoft Fakes
+FakesAssemblies/
+
+# Node.js files
+node_modules/
+
+# Web client files
+wwwroot/
+dist/
+lib/
+
+# ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
