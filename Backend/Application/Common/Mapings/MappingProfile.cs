@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using Application.Employees.Dtos;
+using AutoMapper;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,8 @@ namespace Application.Common.Mapings
     {
         public MappingProfile()
         {
-            
+            //EMPLOYEES
+            CreateMap<EmployeeEntity,EmployeeDto>().ReverseMap();
         }
     }
 }
