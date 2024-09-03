@@ -1,5 +1,7 @@
 ﻿using Application.Employees.Dtos;
 using Application.Products.Dtos;
+using Application.PurchaseOrderDetails.Dtos;
+using Application.PurchaseOrders.Commands.CreatePurchaseOrder;
 using Application.Suppliers.Dtos;
 using AutoMapper;
 using Domain.Entities;
@@ -23,6 +25,17 @@ namespace Application.Common.Mapings
 
             //SUPPLIERS
             CreateMap<SupplierEntity, SupplierDto>().ReverseMap();
+
+            //PURCHASE ORDERS
+            CreateMap<CreatePurchaseOrderCommand, PurchaseOrderEntity>()
+                .ForMember(dest => dest.SupplierEntityId, opt => opt.MapFrom(src => src.SupplierId))
+                .ReverseMap();
+
+            //PURCHASE ORDER DETAILS
+            CreateMap<CreatePurchaseOrderDetailDto, PurchaseOrderDetailEntity>()
+                 .ForMember(dest => dest.ProductEntityId, opts => opts.MapFrom(src => src.ProductId))
+                .ReverseMap();  
+            
         }
     }
 }
