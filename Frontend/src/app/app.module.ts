@@ -22,6 +22,11 @@ import { SupplierRemoteDataSourceBase, SupplierRemoteDataSource } from './featur
 import { SupplierRepository } from './features/suppliers/data/repositories/supplier.repository';
 import { SupplierRepositoryBase } from './features/suppliers/domain/repositories/supplier-base.repository';
 import { GetAllSuppiersUseCase } from './features/suppliers/domain/usecases/get-all-suppliers.usecase';
+import { ROOT_REDUCERS } from './core/manager/app.state';
+import { EffectsModule } from '@ngrx/effects';
+import { EmployeeEffects } from './core/manager/effects/employee.effects';
+import { ProductEffects } from './core/manager/effects/product.effects';
+import { SupplierEffects } from './core/manager/effects/supplier.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +37,9 @@ import { GetAllSuppiersUseCase } from './features/suppliers/domain/usecases/get-
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
-    StoreModule.forRoot({},{}),
-    StoreDevtoolsModule.instrument({name: 'TEST'})
+    StoreModule.forRoot(ROOT_REDUCERS),
+    StoreDevtoolsModule.instrument({name: 'TEST'}),
+    EffectsModule.forRoot([EmployeeEffects, ProductEffects, SupplierEffects])
   ],
   providers: [
     {provide: HttpServiceBase, useClass: HttpService},
