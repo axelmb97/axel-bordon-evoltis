@@ -1,4 +1,5 @@
 ﻿using Application.Employees.Queries;
+using Application.Employees.Queries.GetAllEmployees;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

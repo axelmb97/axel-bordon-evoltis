@@ -1,4 +1,6 @@
 ﻿using Application.Employees.Dtos;
+using Application.Products.Dtos;
+using Application.Suppliers.Dtos;
 using AutoMapper;
 using Domain.Entities;
 using System;
@@ -15,6 +17,12 @@ namespace Application.Common.Mapings
         {
             //EMPLOYEES
             CreateMap<EmployeeEntity,EmployeeDto>().ReverseMap();
+
+            //PRODUCTS
+            CreateMap<ProductEntity, ProductDto>().ReverseMap();
+
+            //SUPPLIERS
+            CreateMap<SupplierEntity, SupplierDto>().ReverseMap();
         }
     }
 }
