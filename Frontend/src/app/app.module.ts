@@ -27,6 +27,11 @@ import { EffectsModule } from '@ngrx/effects';
 import { EmployeeEffects } from './core/manager/effects/employee.effects';
 import { ProductEffects } from './core/manager/effects/product.effects';
 import { SupplierEffects } from './core/manager/effects/supplier.effects';
+import { PurchaseOrderRemoteDataSource, PurchaseOrderRemoteDataSourceBase } from './features/purchase-orders/data/data-sources/purchase-orders-remote.datasource';
+import { PurchaseOrderRepositoryBase } from './features/purchase-orders/domain/repositories/purchase-order-base.repository';
+import { PurchaseOrderRepository } from './features/purchase-orders/data/repositories/purchase-order.repository';
+import { CreatePurchaseOrderUseCase } from './features/purchase-orders/domain/usecases/create-purchase-order.usecase';
+import { GetPaginatedPurchaseOrdersUseCase } from './features/purchase-orders/domain/usecases/get-paginated-purchase-orders.usecase';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +57,9 @@ import { SupplierEffects } from './core/manager/effects/supplier.effects';
     {provide: EmployeeRemoteDataSourceBase, useClass: EmployeeRemoteDataSource},
     {provide: EmployeeRepositoryBase, useClass: EmployeeRepository},
     GetAllEmployeesUseCase,
+    {provide: PurchaseOrderRemoteDataSourceBase, useClass: PurchaseOrderRemoteDataSource},
+    {provide: PurchaseOrderRepositoryBase, useClass: PurchaseOrderRepository},
+    CreatePurchaseOrderUseCase, GetPaginatedPurchaseOrdersUseCase
   ],
   bootstrap: [AppComponent]
 })
