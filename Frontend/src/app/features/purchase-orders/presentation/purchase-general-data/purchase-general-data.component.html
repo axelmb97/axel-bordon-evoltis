@@ -1,0 +1,14 @@
+<form [formGroup]="purchaseOrderForm" class="p-2">
+  <article class="mb-2">
+    <div class="py-2">
+      <p>Proveedor</p>
+    </div>
+    <p-dropdown  [style]="{width: '100%'}" formControlName="supplier" [options]="suppliers" optionLabel="businessName" placeholder="Seleccione un proveedor"></p-dropdown>
+  </article>
+  <article class="mb-2">
+    <div class="py-2">
+      <p>Fecha de llegada</p>
+    </div>
+    <p-calendar [style]="{width: '100%'}" formControlName="deliveryDate" [minDate]="minDate" [readonlyInput]="true"></p-calendar>
+  </article>
+</form>

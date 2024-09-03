@@ -11,6 +11,8 @@ export class PurchaseOrderModel extends PurchaseOrder {
   }
 
   static fromJson(data:Map<string,any>) : PurchaseOrder {
+    console.log("PURCHASE", data);
+    
     let supplier = this.getMappedSupplier(data.get("supplier"));
     let details = this.getMappedDetails(data.get("details"));
     

@@ -32,10 +32,23 @@ import { PurchaseOrderRepositoryBase } from './features/purchase-orders/domain/r
 import { PurchaseOrderRepository } from './features/purchase-orders/data/repositories/purchase-order.repository';
 import { CreatePurchaseOrderUseCase } from './features/purchase-orders/domain/usecases/create-purchase-order.usecase';
 import { GetPaginatedPurchaseOrdersUseCase } from './features/purchase-orders/domain/usecases/get-paginated-purchase-orders.usecase';
+import { PurchaseOrderIndexComponent } from './features/purchase-orders/presentation/purchase-order-index/purchase-order-index.component';
+import { AddPurchaseOrderComponent } from './features/purchase-orders/presentation/add-purchase-order/add-purchase-order.component';
+import { EditPurchaseOrderComponent } from './features/purchase-orders/presentation/edit-purchase-order/edit-purchase-order.component';
+import { PurchaseOrderListComponent } from './features/purchase-orders/presentation/purchase-order-list/purchase-order-list.component';
+import { PurchaseOrderEffects } from './core/manager/effects/purchase-order.effects';
+import { PurchaseGeneralDataComponent } from './features/purchase-orders/presentation/purchase-general-data/purchase-general-data.component';
+import { PurchaseDetailsComponent } from './features/purchase-orders/presentation/purchase-details/purchase-details.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FormatDatePipe
+    FormatDatePipe,
+    PurchaseOrderIndexComponent,
+    AddPurchaseOrderComponent,
+    EditPurchaseOrderComponent,
+    PurchaseOrderListComponent,
+    PurchaseGeneralDataComponent,
+    PurchaseDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +57,7 @@ import { GetPaginatedPurchaseOrdersUseCase } from './features/purchase-orders/do
     SharedModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({name: 'TEST'}),
-    EffectsModule.forRoot([EmployeeEffects, ProductEffects, SupplierEffects])
+    EffectsModule.forRoot([EmployeeEffects, ProductEffects, SupplierEffects, PurchaseOrderEffects])
   ],
   providers: [
     {provide: HttpServiceBase, useClass: HttpService},

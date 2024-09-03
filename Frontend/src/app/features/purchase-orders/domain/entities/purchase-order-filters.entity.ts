@@ -6,7 +6,7 @@ export abstract class PurchaseOrderFilters extends Entity implements GetFilterPa
 
   constructor(
     public page: number = 1,
-    public pageSize: number = 10,
+    public pageSize: number = 5,
     public businessName?: string,
     public from?: Date,
     public to?: Date,

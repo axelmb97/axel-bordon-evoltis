@@ -1,0 +1,14 @@
+
+<section class="flex justify-content-center">
+  <section class="w-35rem bg-white border-round-md shadow-1">
+    <article class="text-center py-4">
+      <h2>Ingrese datos de la orden</h2>
+    </article>
+    <article>
+      <p-steps [model]="items" [readonly]="false"></p-steps>
+    </article>
+    <article>
+      <router-outlet></router-outlet>
+    </article>
+  </section>
+</section>
