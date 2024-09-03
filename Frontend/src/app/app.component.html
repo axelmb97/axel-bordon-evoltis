@@ -6,3 +6,6 @@
     <router-outlet></router-outlet>
   </article>
 </section>
+<section class="spinner-container" *ngIf="isLoading$ | async">
+  <p-progressSpinner strokeWidth="4"  animationDuration="500ms" ></p-progressSpinner>
+</section>

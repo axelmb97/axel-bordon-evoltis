@@ -18,6 +18,7 @@ export class AppComponent implements OnInit{
   constructor(private store: Store<AppState>){}
 
   ngOnInit(): void {
+    this.selectAppState();
     this.store.dispatch(laodSuppliers());
     this.store.dispatch(loadProducts());
     this.store.dispatch(loadEmployees());
