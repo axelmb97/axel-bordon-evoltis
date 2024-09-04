@@ -7,7 +7,7 @@ export class CreatePurchaseOrderModel extends CreatePurchaseOrder {
     json.set("supplier_id", this.supplierId);
     json.set("delivery_date", this.deliveryDate);
     json.set("details", this.getDetails());
-
+    if (this.id) json.set("id", this.id);
     return json;
   }
 

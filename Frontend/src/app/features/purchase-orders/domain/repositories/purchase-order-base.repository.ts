@@ -13,4 +13,5 @@ export abstract class PurchaseOrderRepositoryBase {
   abstract deletePurchaseOrder(purchaseOrderId: number): Promise<boolean | Failure>;
   abstract getPaginatedPurchaseOrderDetails(filters:PurchaseOrderDetailFilters): Promise<PaginatedPurchaseOrderDetails | Failure>;
   abstract getPurchaseOrderById(purchaseId: number) : Promise<PurchaseOrder | Failure>;
+  abstract updatePurchaseOrder(purchase: CreatePurchaseOrder) : Promise<boolean | Failure>;
 }

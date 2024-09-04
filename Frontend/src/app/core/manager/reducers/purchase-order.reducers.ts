@@ -61,6 +61,11 @@ export const purchaseOrderReducers = createReducer(
     
     return {...state, currentPurchase: purchase}
   }),
+  on(PurchaseOrderActions.deletePurchaseOrderDetail, (state, prop) => {
+    let purchase = {...state.currentPurchase} as CreatePurchaseOrder;
+    purchase.details = purchase.details?.filter(d => d.productId != prop.detail.productId);
+    return {...state, currentPurchase: purchase}
+  }),
   on(PurchaseOrderActions.cleanOrder, (state) => {
     return {...state, error: undefined, success: '', currentPurchase: undefined}
   }),
@@ -89,7 +94,10 @@ export const purchaseOrderReducers = createReducer(
    
     let purchase = getCreatePurchaseOrder(prop.purchase);
     return {...state, loading: false, currentPurchase : purchase}
-  })
+  }),
+  on(PurchaseOrderActions.updatePurchaseOrder, (state) => {
+    return {...state, loading: true}
+  }),
 );
 
 const mapPaginatedDetails = (pagination: PaginatedPurchaseOrderDetails) : CreatePurchaseOrderDetail[] => {

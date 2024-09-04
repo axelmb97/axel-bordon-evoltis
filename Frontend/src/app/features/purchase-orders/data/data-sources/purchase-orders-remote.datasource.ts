@@ -17,7 +17,8 @@ export abstract class PurchaseOrderRemoteDataSourceBase {
   abstract createPurchaseOrder(purchaseOrder: CreatePurchaseOrder): Promise<boolean>;
   abstract deletePurchseOrder(purchaseId: number): Promise<boolean>;
   abstract getPaginatedPurchaseOrderDetails(filters:PurchaseOrderDetailFilters): Promise<PaginatedPurchaseOrderDetails>;
-  abstract getPurchaseOrderById(purchaseId: number) : Promise<PurchaseOrder>
+  abstract getPurchaseOrderById(purchaseId: number) : Promise<PurchaseOrder>;
+  abstract updatePurchaseOrder(purchase: CreatePurchaseOrder) : Promise<boolean>;
 }
 
 @Injectable()
@@ -41,7 +42,7 @@ export class PurchaseOrderRemoteDataSource extends PurchaseOrderRemoteDataSource
     let p = new CreatePurchaseOrderModel(0,'',[]);
     Object.assign(p, purchaseOrder);
     if (purchaseOrder.details) {
-      p.details = [...purchaseOrder.details]; // Copiar el array de detalles
+      p.details = [...purchaseOrder.details]; 
     }
 
     let result = await this.httpService.post(this.url, p);
@@ -64,5 +65,17 @@ export class PurchaseOrderRemoteDataSource extends PurchaseOrderRemoteDataSource
     let result = await this.httpService.get(`${this.url}/${purchaseId}`);
     let map = new Map<string,any>(Object.entries(result.get("response")));
     return PurchaseOrderModel.fromJson(map);
+  }
+
+  override async updatePurchaseOrder(purchase: CreatePurchaseOrder): Promise<boolean> {
+    let order = new CreatePurchaseOrderModel(0,'',[]);
+    Object.assign(order, purchase);
+    if (purchase.details) {
+      order.details = [...purchase.details]; 
+    }
+    
+    let result = await this.httpService.put(this.url, order);
+    let map = new Map<string,any>(Object.entries(result.get("response")));
+    return map.get("response");
   }
 }

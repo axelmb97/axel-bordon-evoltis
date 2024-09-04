@@ -5,7 +5,6 @@ import { AppState } from 'src/app/core/manager/app.state';
 import { selectCurrentPurchaseOrder } from 'src/app/core/manager/selectors/purchase-order.selectors';
 import { selectSuppliers } from 'src/app/core/manager/selectors/supplier.selectors';
 import { Supplier } from 'src/app/features/suppliers/domain/entities/supplier.entity';
-import { CreatePurchaseOrder } from '../../domain/entities/create-purchase-order.entity';
 import { addPurchaseGeneralData, loadPurchaseOrderById } from 'src/app/core/manager/actions/purchase-orders.actions';
 import { ActivatedRoute } from '@angular/router';
 
@@ -42,6 +41,8 @@ export class PurchaseGeneralDataComponent implements OnInit{
         this.isUpdate = true;
         this.purchaseOrderIdToUpdate = id;
         this.store.dispatch(loadPurchaseOrderById({purchaseId: id}));
+      } else {
+        this.purchaseOrderForm.reset();
       }
     })
   }
@@ -55,14 +56,15 @@ export class PurchaseGeneralDataComponent implements OnInit{
 
   selectCurrenPurchase() : void {
     this.store.select(selectCurrentPurchaseOrder).subscribe(purchaseOrder => {
-      //TODO: Actualizar dropdowns
       
       if (!purchaseOrder) return;
+
       if (purchaseOrder.deliveryDate) {
         this.purchaseOrderForm.patchValue({
-          deliveryDate: purchaseOrder.deliveryDate
+          deliveryDate: new Date(purchaseOrder.deliveryDate)
         });
       }
+
       if (purchaseOrder.supplierId) {
         this.purchaseOrderForm.patchValue({
           supplier: purchaseOrder.supplierId

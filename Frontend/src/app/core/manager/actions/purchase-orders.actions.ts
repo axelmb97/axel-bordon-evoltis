@@ -47,6 +47,11 @@ export const addPurchaseOrderDetail = createAction(
   props<{detail: CreatePurchaseOrderDetail}>()
 );
 
+export const deletePurchaseOrderDetail = createAction(
+  PurchaseOrderActionName.DELETE_PURCHASE_DETAL,
+  props<{detail: CreatePurchaseOrderDetail}>()
+);
+
 export const cleanOrder = createAction(
   PurchaseOrderActionName.CLEAN_ORDER
 );
@@ -74,4 +79,9 @@ export const loadPurchaseOrderById = createAction(
 export const loadedPurchaseOrderById = createAction(
   PurchaseOrderActionName.LOADED_PURCHASE_ORDER_BY_ID,
   props<{purchase: PurchaseOrder}>()
+);
+
+export const updatePurchaseOrder = createAction(
+  PurchaseOrderActionName.UPDATE_PURCHASE_ORDER,
+  props<{purchase: CreatePurchaseOrder}>()
 );
