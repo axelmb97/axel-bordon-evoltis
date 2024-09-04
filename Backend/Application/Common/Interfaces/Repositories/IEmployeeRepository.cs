@@ -9,6 +9,7 @@ namespace Application.Common.Interfaces.Repositories
 {
     public interface IEmployeeRepository
     {
+        Task<EmployeeEntity> GetById(int id);
         Task<List<EmployeeEntity>> GetAll();
     }
 }
