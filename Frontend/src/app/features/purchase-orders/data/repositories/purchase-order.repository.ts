@@ -28,6 +28,7 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
     try {
       return await this.purchaseOrderRemoteDataSource.createPurchaseOrder(purchaseOrder);
     } catch (error:any) {
+      console.log("ERROR", error);
       return new UnhandledFailure();
     }
   }

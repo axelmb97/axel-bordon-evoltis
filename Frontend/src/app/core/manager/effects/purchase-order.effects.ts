@@ -6,6 +6,7 @@ import { from, map, mergeMap } from "rxjs";
 import { PaginatedPurchaseOrders } from "src/app/features/purchase-orders/domain/entities/paginated-purchases.entity";
 import { Failure } from "../../failures/failure";
 import { CreatePurchaseOrderUseCase } from "src/app/features/purchase-orders/domain/usecases/create-purchase-order.usecase";
+import { CreatePurchaseOrder } from "src/app/features/purchase-orders/domain/entities/create-purchase-order.entity";
 
 
 

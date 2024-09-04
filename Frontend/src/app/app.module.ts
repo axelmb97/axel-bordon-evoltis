@@ -39,6 +39,7 @@ import { PurchaseOrderListComponent } from './features/purchase-orders/presentat
 import { PurchaseOrderEffects } from './core/manager/effects/purchase-order.effects';
 import { PurchaseGeneralDataComponent } from './features/purchase-orders/presentation/purchase-general-data/purchase-general-data.component';
 import { PurchaseDetailsComponent } from './features/purchase-orders/presentation/purchase-details/purchase-details.component';
+import { PurchaseOrderDetailModalComponent } from './features/purchase-orders/presentation/purchase-order-detail-modal/purchase-order-detail-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { PurchaseDetailsComponent } from './features/purchase-orders/presentatio
     EditPurchaseOrderComponent,
     PurchaseOrderListComponent,
     PurchaseGeneralDataComponent,
-    PurchaseDetailsComponent
+    PurchaseDetailsComponent,
+    PurchaseOrderDetailModalComponent
   ],
   imports: [
     BrowserModule,

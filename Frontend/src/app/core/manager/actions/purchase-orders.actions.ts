@@ -4,6 +4,9 @@ import { PaginatedPurchaseOrders } from "src/app/features/purchase-orders/domain
 import { PurchaseOrderFilters } from "src/app/features/purchase-orders/domain/entities/purchase-order-filters.entity";
 import { CreatePurchaseOrder } from "src/app/features/purchase-orders/domain/entities/create-purchase-order.entity";
 import { Failure } from "../../failures/failure";
+import { PurchaseOrderDetail } from "src/app/features/purchase-orders/domain/entities/purchase-order-detail.entity";
+import { CreatePurchaseOrderDetailModel } from "src/app/features/purchase-orders/data/models/create-purchase-order-detail.model";
+import { CreatePurchaseOrderDetail } from "src/app/features/purchase-orders/domain/entities/create-purchase-order-detail.entity";
 
 export const loadPurchaseOrders = createAction(
   PurchaseOrderActionName.LOAD_PAGINATED_PURCHASES,
@@ -28,4 +31,14 @@ export const setPurchaseOrderError = createAction(
 export const setPurchaseOrderSuccess = createAction(
   PurchaseOrderActionName.SET_SUCCESS,
   props<{message: string}>()
+);
+
+export const addPurchaseGeneralData = createAction(
+  PurchaseOrderActionName.ADD_GENERAL_DATA,
+  props<{supplierId: number, deliveryDate: string}>()
+);
+
+export const addPurchaseOrderDetail = createAction(
+  PurchaseOrderActionName.ADD_PURCHASE_DEETAIL,
+  props<{detail: CreatePurchaseOrderDetail}>()
 );

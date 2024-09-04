@@ -5,8 +5,7 @@
           (click)="addDetail()"></button>
     </article>
     <article >
-      <form [formGroup]="detailsForm">
-        <p-table [value]="details.controls">
+        <p-table [value]="currentPurchaseOrder?.details || []">
           <ng-template pTemplate="header">
             <tr>
               <th>Cantidad</th>
@@ -16,15 +15,15 @@
             </tr>
           </ng-template>
           <ng-template pTemplate="body" let-purchase let-i="rowIndex">
-            <tr [formGroupName]="i">
+            <tr>
               <td>
-                <p-inputNumber formControlName="quantity"  [min]="0"></p-inputNumber>
+                <p>{{ purchase.quantity}}</p>
               </td>
               <td>
-                <p-dropdown  formControlName="product" [options]="products" optionLabel="name" placeholder="Seleccione un proveedor"></p-dropdown>
+                <p>{{ getProductName(purchase.productId)}}</p>
               </td>
               <td>
-                <p-inputNumber formControlName="price" ></p-inputNumber>
+                <p>{{ purchase.priceByUnit}}</p>
               </td>
               <td>
                 <button pButton type="button" icon="pi pi-trash" size="small" class="p-button-danger" (click)="removeDetail(i)"></button>
@@ -32,7 +31,9 @@
             </tr>
           </ng-template>
         </p-table>
-      </form>
     </article>
   </section>
 </article>
+<p-dialog header="Header" [(visible)]="showModal" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+  <app-purchase-order-detail-modal (closeModal)="onCloseModal()"></app-purchase-order-detail-modal>
+</p-dialog>

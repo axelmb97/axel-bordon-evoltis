@@ -10,6 +10,8 @@ export class CreatePurchaseOrderUseCase implements UseCase<CreatePurchaseOrder, 
   constructor(private purchaseOrderRepository: PurchaseOrderRepositoryBase){}
   
   execute(param: CreatePurchaseOrder): Promise<boolean | Failure> {
+   
+    
     return this.purchaseOrderRepository.createPurchaseOrder(param);
   }
 }

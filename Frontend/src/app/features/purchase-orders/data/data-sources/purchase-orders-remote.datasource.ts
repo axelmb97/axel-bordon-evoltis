@@ -5,6 +5,7 @@ import { HttpServiceBase } from "src/app/core/services/http-service.base";
 import { environment } from "src/environments/environment.development";
 import { PaginatedPurchaseOrdersModel } from "../models/paginated-purchases.model";
 import { CreatePurchaseOrder } from "../../domain/entities/create-purchase-order.entity";
+import { CreatePurchaseOrderModel } from "../models/create-purchase-order.model";
 
 export abstract class PurchaseOrderRemoteDataSourceBase {
   abstract getPaginatedPurchaseOrders(filters: PurchaseOrderFilters): Promise<PaginatedPurchaseOrders>;
@@ -29,7 +30,13 @@ export class PurchaseOrderRemoteDataSource extends PurchaseOrderRemoteDataSource
   }
 
   override async  createPurchaseOrder(purchaseOrder: CreatePurchaseOrder): Promise<boolean> {
-    let result = await this.httpService.post(this.url, purchaseOrder);
+    let p = new CreatePurchaseOrderModel(0,'',[]);
+    Object.assign(p, purchaseOrder);
+    if (purchaseOrder.details) {
+      p.details = [...purchaseOrder.details]; // Copiar el array de detalles
+    }
+    console.log("DATA SPURCE", p);
+    let result = await this.httpService.post(this.url, p);
     return result.get("response");
   }
 }

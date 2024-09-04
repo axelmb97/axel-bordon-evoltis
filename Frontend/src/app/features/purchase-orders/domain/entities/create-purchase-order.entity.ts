@@ -5,9 +5,9 @@ import { CreatePurchaseOrderDetail } from "./create-purchase-order-detail.entity
 export abstract class CreatePurchaseOrder extends Entity {
 
   constructor(
-    public supplierId: number,
-    public deliveryDate: Date,
-    public details: CreatePurchaseOrderDetail[]
+    public supplierId?: number,
+    public deliveryDate?: string,
+    public details?: CreatePurchaseOrderDetail[]
   ){
     super();
   }

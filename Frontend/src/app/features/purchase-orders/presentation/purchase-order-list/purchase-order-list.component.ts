@@ -46,7 +46,7 @@ export class PurchaseOrderListComponent implements OnInit{
   }
  
   onAddPurchaseOrder() : void {
-    this.router.navigate(['purchase-orders/add']);
+    this.router.navigate(['purchase-orders/add/general']);
   }
 
 

@@ -9,7 +9,7 @@ import { PaginatorModule } from 'primeng/paginator';
 import { MessagesModule } from 'primeng/messages';
 import { ToastModule } from 'primeng/toast';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
-import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
@@ -17,7 +17,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { StepsModule } from 'primeng/steps';
 import { MessageService } from 'primeng/api';
-
+import { DialogModule } from 'primeng/dialog';
 @NgModule({
   declarations: [
     SidebarComponent
@@ -50,8 +50,9 @@ import { MessageService } from 'primeng/api';
     ToastModule,
     CalendarModule,
     InputNumberModule,
-    StepsModule
+    StepsModule,
+    DialogModule
   ],
-  providers: [MessageService]
+  providers: [MessageService, DialogService]
 })
 export class SharedModule { }

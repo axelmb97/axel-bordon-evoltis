@@ -18,3 +18,13 @@ export const selectPurchaseOrderError = createSelector(
   selectPurchaseOrderFeature,
   (state: PurchaseOrdersState) => state.error
 );
+
+export const selectPurchaseOrderSuccess = createSelector(
+  selectPurchaseOrderFeature,
+  (state:PurchaseOrdersState) => state.success
+);
+
+export const selectCurrentPurchaseOrder = createSelector(
+  selectPurchaseOrderFeature,
+  (state: PurchaseOrdersState) => state.currentPurchase
+);

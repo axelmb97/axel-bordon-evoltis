@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AppState } from 'src/app/core/manager/app.state';
 import { selectProducts } from 'src/app/core/manager/selectors/product.selectors';
 import { Product } from 'src/app/features/products/domain/entities/product.entity';
+import { CreatePurchaseOrder } from '../../domain/entities/create-purchase-order.entity';
+import { selectCurrentPurchaseOrder } from 'src/app/core/manager/selectors/purchase-order.selectors';
+import { PurchaseOrderDetailModalComponent } from '../purchase-order-detail-modal/purchase-order-detail-modal.component';
 
 @Component({
   selector: 'app-purchase-details',
@@ -12,22 +16,15 @@ import { Product } from 'src/app/features/products/domain/entities/product.entit
 })
 export class PurchaseDetailsComponent implements OnInit{
   products: Product[] = [];
-  detailsForm: FormGroup = new FormGroup({});
-
+  currentPurchaseOrder?: CreatePurchaseOrder;
+  showModal: boolean = false;
   constructor(
     private store: Store<AppState>,
-    private builder: FormBuilder
   ){}
 
   ngOnInit(): void {
-    this.initForm();
     this.selectProducts();
-  }
-
-  initForm() : void {
-    this.detailsForm = this.builder.group({
-      details: this.builder.array([])
-    });;
+    this.selectCurrenPurchase();
   }
 
   selectProducts() : void {
@@ -37,24 +34,28 @@ export class PurchaseDetailsComponent implements OnInit{
     });
   }
 
-  get details() : FormArray {
-    return this.detailsForm.get('details') as FormArray;
-  }
-
-  addDetail() : void {
-    let details = this.createDetail();
-    this.details.push(details)
-  }
-
-  createDetail(): FormGroup {
-    return this.builder.group({
-      quantity: [0, [Validators.required, Validators.min(1)]],
-      product: ['', [Validators.required]],
-      price: [0, [Validators.required, Validators.min(1)]]
+  selectCurrenPurchase() : void {
+    this.store.select(selectCurrentPurchaseOrder).subscribe(purchaseOrder => {
+      if(!purchaseOrder) return;
+      console.log("DETAILS",purchaseOrder);
+      
+      this.currentPurchaseOrder = purchaseOrder;
     });
   }
 
-  removeDetail(index: number): void {
-    this.details.removeAt(index);
+  addDetail() : void {
+    this.showModal = true;
+  }
+
+  removeDetail(index:number) : void {
+
+  }
+
+  onCloseModal(): void {
+    this.showModal = false;
+  }
+
+  getProductName(productId:number) : string {
+    return this.products.find(p => p.id == productId)?.name!;
   }
 }

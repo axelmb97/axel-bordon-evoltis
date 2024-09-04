@@ -6,10 +6,10 @@ import { Supplier } from "src/app/features/suppliers/domain/entities/supplier.en
 export abstract class PurchaseOrder extends Entity {
 
   constructor(
-    public id: number,
-    public supplier: Supplier,
-    public deliveryDate: Date,
-    public details: PurchaseOrderDetail[]
+    public id?: number,
+    public supplier?: Supplier,
+    public deliveryDate?: Date,
+    public details?: PurchaseOrderDetail[]
   ){
     super();
   }
