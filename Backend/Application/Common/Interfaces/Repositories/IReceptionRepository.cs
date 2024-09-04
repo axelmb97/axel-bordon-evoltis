@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Common.Interfaces.Repositories
 {
-    public interface IReceptioRepository
+    public interface IReceptionRepository
     {
         Task<ReceptionEntity> GetReceptionById(int id);
         Task<Pagination<ReceptionEntity>> GetFilteredReceptions(GetFilteredReceptionsQuery filters);

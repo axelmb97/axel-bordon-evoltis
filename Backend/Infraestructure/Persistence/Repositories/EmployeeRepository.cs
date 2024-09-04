@@ -23,5 +23,10 @@ namespace Infraestructure.Persistence.Repositories
         {
             return await _dbContext.Employees.ToListAsync();
         }
+
+        public async Task<EmployeeEntity> GetById(int id)
+        {
+            return await _dbContext.Employees.FirstOrDefaultAsync(e => e.Id.Equals(id));
+        }
     }
 }
