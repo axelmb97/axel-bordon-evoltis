@@ -42,6 +42,7 @@ import { PurchaseDetailsComponent } from './features/purchase-orders/presentatio
 import { PurchaseOrderDetailModalComponent } from './features/purchase-orders/presentation/purchase-order-detail-modal/purchase-order-detail-modal.component';
 import { DeletePurchaseOrderUseCase } from './features/purchase-orders/domain/usecases/delete-purchase-order.usecase';
 import { GetPaginatedPurchaseOrderDetailsUseCase } from './features/purchase-orders/domain/usecases/get-paginated-purchase-order-details.usecase';
+import { GetPurchaseOrderByIdUseCase } from './features/purchase-orders/domain/usecases/get-purchase-order-by-id.usecase';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +78,7 @@ import { GetPaginatedPurchaseOrderDetailsUseCase } from './features/purchase-ord
     {provide: PurchaseOrderRemoteDataSourceBase, useClass: PurchaseOrderRemoteDataSource},
     {provide: PurchaseOrderRepositoryBase, useClass: PurchaseOrderRepository},
     CreatePurchaseOrderUseCase, GetPaginatedPurchaseOrdersUseCase, DeletePurchaseOrderUseCase,
-    GetPaginatedPurchaseOrderDetailsUseCase
+    GetPaginatedPurchaseOrderDetailsUseCase, GetPurchaseOrderByIdUseCase
   ],
   bootstrap: [AppComponent]
 })

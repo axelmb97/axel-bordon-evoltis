@@ -9,5 +9,7 @@ export enum PurchaseOrderActionName {
   CLEAN_ORDER = "[Add purchase order] Clean order",
   DELETE_PURCHASE_ORDER = "[Purchase order list] Delete purchase order",
   LOAD_PURCHASE_DETAILS = "[Purchase order list] Load purchase details",
-  LOADED_PURCHASE_DETAILS = "[EFFECTS] Loaded purchase details"
+  LOADED_PURCHASE_DETAILS = "[EFFECTS] Loaded purchase details",
+  LOAD_PURCHASE_ORDER_BY_ID = "[Purchase order list, Purchase order general data, Purchase order details] Load purchase order by id",
+  LOADED_PURCHASE_ORDER_BY_ID = "[EFFECTS] Loaded purchase oirder by id"
 }

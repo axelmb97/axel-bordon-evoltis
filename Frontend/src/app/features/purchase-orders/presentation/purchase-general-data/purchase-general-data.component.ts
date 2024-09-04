@@ -6,7 +6,7 @@ import { selectCurrentPurchaseOrder } from 'src/app/core/manager/selectors/purch
 import { selectSuppliers } from 'src/app/core/manager/selectors/supplier.selectors';
 import { Supplier } from 'src/app/features/suppliers/domain/entities/supplier.entity';
 import { CreatePurchaseOrder } from '../../domain/entities/create-purchase-order.entity';
-import { addPurchaseGeneralData } from 'src/app/core/manager/actions/purchase-orders.actions';
+import { addPurchaseGeneralData, loadPurchaseOrderById } from 'src/app/core/manager/actions/purchase-orders.actions';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -35,11 +35,13 @@ export class PurchaseGeneralDataComponent implements OnInit{
   }
 
   isUpdateOperation() : void {
-    this.activatedRoute.params.subscribe( params => {
-      const id = params['id'];
+    this.activatedRoute.parent?.paramMap.subscribe( params => {
+      
+      const id = Number(params.get("id"));
       if (id) {
         this.isUpdate = true;
         this.purchaseOrderIdToUpdate = id;
+        this.store.dispatch(loadPurchaseOrderById({purchaseId: id}));
       }
     })
   }

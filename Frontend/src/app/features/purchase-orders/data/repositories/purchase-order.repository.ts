@@ -9,6 +9,7 @@ import { UnhandledFailure } from "src/app/core/failures/unhandled.failure";
 import { CreatePurchaseOrder } from "../../domain/entities/create-purchase-order.entity";
 import { PaginatedPurchaseOrderDetails } from "../../domain/entities/paginated-purchase-order-details.entity";
 import { PurchaseOrderDetailFilters } from "../../domain/entities/purchase-order-deatil-filters.entoty";
+import { PurchaseOrder } from "../../domain/entities/purchase-order.entity";
 
 @Injectable()
 export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
@@ -44,6 +45,14 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
   override async getPaginatedPurchaseOrderDetails(filters: PurchaseOrderDetailFilters): Promise<PaginatedPurchaseOrderDetails | Failure> {
     try {
       return await this.purchaseOrderRemoteDataSource.getPaginatedPurchaseOrderDetails(filters);
+    } catch (error:any) {
+      return new UnhandledFailure();
+    }
+  }
+
+  override async getPurchaseOrderById(purchaseId: number): Promise<PurchaseOrder | Failure> {
+    try {
+      return await this.purchaseOrderRemoteDataSource.getPurchaseOrderById(purchaseId);
     } catch (error:any) {
       return new UnhandledFailure();
     }

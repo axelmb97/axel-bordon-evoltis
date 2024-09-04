@@ -9,6 +9,8 @@ import { CreatePurchaseOrderDetailModel } from "src/app/features/purchase-orders
 import { CreatePurchaseOrderDetail } from "src/app/features/purchase-orders/domain/entities/create-purchase-order-detail.entity";
 import { PurchaseOrderDetailFilters } from "src/app/features/purchase-orders/domain/entities/purchase-order-deatil-filters.entoty";
 import { PaginatedPurchaseOrderDetails } from "src/app/features/purchase-orders/domain/entities/paginated-purchase-order-details.entity";
+import { PurchaseOrderModel } from "src/app/features/purchase-orders/data/models/purchase-order.model";
+import { PurchaseOrder } from "src/app/features/purchase-orders/domain/entities/purchase-order.entity";
 
 export const loadPurchaseOrders = createAction(
   PurchaseOrderActionName.LOAD_PAGINATED_PURCHASES,
@@ -55,11 +57,21 @@ export const deletePurchase = createAction(
 );
 
 export const loadPurchaseOrderDetails = createAction(
-  PurchaseOrderActionName.LOADED_PAGINATED_PURCHASES,
-  props<{filters: PurchaseOrderDetailFilters}>()
+  PurchaseOrderActionName.LOAD_PURCHASE_DETAILS,
+  props<{filters: PurchaseOrderDetailFilters, currentPurchase: PurchaseOrderModel}>()
 );
 
 export const loadedPurchaseOrderDetails = createAction(
-  PurchaseOrderActionName.LOADED_PAGINATED_PURCHASES,
+  PurchaseOrderActionName.LOADED_PURCHASE_DETAILS,
   props<{details: PaginatedPurchaseOrderDetails}>()
+);
+
+export const loadPurchaseOrderById = createAction(
+  PurchaseOrderActionName.LOAD_PURCHASE_ORDER_BY_ID,
+  props<{purchaseId: number}>()
+);
+
+export const loadedPurchaseOrderById = createAction(
+  PurchaseOrderActionName.LOADED_PURCHASE_ORDER_BY_ID,
+  props<{purchase: PurchaseOrder}>()
 );

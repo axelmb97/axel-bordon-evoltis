@@ -5,11 +5,12 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { AppState } from 'src/app/core/manager/app.state';
 import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
-import { cleanOrder, deletePurchase, loadPurchaseOrders } from 'src/app/core/manager/actions/purchase-orders.actions';
+import { cleanOrder, deletePurchase, loadPurchaseOrderById, loadPurchaseOrderDetails, loadPurchaseOrders } from 'src/app/core/manager/actions/purchase-orders.actions';
 import { PurchaseOrderFiltersModel } from '../../data/models/purchase-order-filters.model';
 import { selectPaginatedPurchaseOrders, selectPurchaseOrderSuccess } from 'src/app/core/manager/selectors/purchase-order.selectors';
 import { PaginatorState } from 'primeng/paginator';
 import { PurchaseOrderModel } from '../../data/models/purchase-order.model';
+import { PurchaseOrderDetailFiltersModel } from '../../data/models/purchase-order-detail-filters.model';
 
 @Component({
   selector: 'app-purchase-order-list',
@@ -54,7 +55,9 @@ export class PurchaseOrderListComponent implements OnInit{
 
   onUpdate(purchase: PurchaseOrderModel) : void {
     this.router.navigate(['purchase-orders',purchase.id,'general']);
-    //TODO: ACA se deberia hacer el get details by purchase order id
+    console.log("PURCHASE UPDATE", purchase);
+
+    this.store.dispatch(loadPurchaseOrderById({purchaseId: purchase.id!}));
   }
 
   onDelete(purchase: PurchaseOrderModel) : void {  

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Store } from '@ngrx/store';
+import { MenuItem, MessageService } from 'primeng/api';
+import { AppState } from 'src/app/core/manager/app.state';
+import { selectCurrentPurchaseOrder } from 'src/app/core/manager/selectors/purchase-order.selectors';
+import { CreatePurchaseOrder } from '../../domain/entities/create-purchase-order.entity';
 
 @Component({
   selector: 'app-edit-purchase-order',
@@ -8,11 +12,16 @@ import { MenuItem } from 'primeng/api';
 })
 export class EditPurchaseOrderComponent implements OnInit{
   items: MenuItem[] = [];
+  purchase?: CreatePurchaseOrder;
 
-  constructor() {}
+  constructor(
+    private store: Store<AppState>,
+    private messageService: MessageService,
+  ) {}
   
   ngOnInit(): void {
     this.initItems();
+    this.selectCurrenPurchase();
   }
 
   initItems() : void {
@@ -26,6 +35,13 @@ export class EditPurchaseOrderComponent implements OnInit{
           routerLink: 'details'
       }
     ];
+  }
+  
+  selectCurrenPurchase() : void {
+    this.store.select(selectCurrentPurchaseOrder).subscribe(purchaseOrder => {
+      if(!purchaseOrder) return;
+      this.purchase = purchaseOrder;
+    });
   }
 
   onSavePurchaseOrder() : void {

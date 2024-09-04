@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { GetPaginatedPurchaseOrdersUseCase } from "src/app/features/purchase-orders/domain/usecases/get-paginated-purchase-orders.usecase";
-import { createPurchaseOrder, deletePurchase, loadedPurchaseOrderDetails, loadedPurchaseOrders, loadPurchaseOrderDetails, loadPurchaseOrders, setPurchaseOrderError, setPurchaseOrderSuccess } from "../actions/purchase-orders.actions";
+import { createPurchaseOrder, deletePurchase, loadedPurchaseOrderById, loadedPurchaseOrderDetails, loadedPurchaseOrders, loadPurchaseOrderById, loadPurchaseOrderDetails, loadPurchaseOrders, setPurchaseOrderError, setPurchaseOrderSuccess } from "../actions/purchase-orders.actions";
 import { from, map, mergeMap } from "rxjs";
 import { PaginatedPurchaseOrders } from "src/app/features/purchase-orders/domain/entities/paginated-purchases.entity";
 import { Failure } from "../../failures/failure";
@@ -10,6 +10,8 @@ import { CreatePurchaseOrder } from "src/app/features/purchase-orders/domain/ent
 import { DeletePurchaseOrderUseCase } from "src/app/features/purchase-orders/domain/usecases/delete-purchase-order.usecase";
 import { GetPaginatedPurchaseOrderDetailsUseCase } from "src/app/features/purchase-orders/domain/usecases/get-paginated-purchase-order-details.usecase";
 import { PaginatedPurchaseOrderDetails } from "src/app/features/purchase-orders/domain/entities/paginated-purchase-order-details.entity";
+import { GetPurchaseOrderByIdUseCase } from "src/app/features/purchase-orders/domain/usecases/get-purchase-order-by-id.usecase";
+import { PurchaseOrder } from "src/app/features/purchase-orders/domain/entities/purchase-order.entity";
 
 
 
@@ -21,7 +23,8 @@ export class PurchaseOrderEffects {
     private getPaginatedPurchaseOrdersUseCase: GetPaginatedPurchaseOrdersUseCase,
     private createPurchaseOrderUseCase: CreatePurchaseOrderUseCase,
     private deletePurchaseOrderUseCase: DeletePurchaseOrderUseCase,
-    private getPaginatedPurchaseOrderDetailsUseCase: GetPaginatedPurchaseOrderDetailsUseCase
+    private getPaginatedPurchaseOrderDetailsUseCase: GetPaginatedPurchaseOrderDetailsUseCase,
+    private getPurchaseOrderByIdUseCase: GetPurchaseOrderByIdUseCase
   ){}
 
   getPaginatedPurchaseOrders = createEffect(() => this.actions$.pipe(
@@ -80,6 +83,24 @@ export class PurchaseOrderEffects {
               return (setPurchaseOrderError({error:result}));
             }
             return loadedPurchaseOrderDetails({details: result})
+          })
+        )
+      )
+    )
+  );
+
+  getPurchaseOrderById = createEffect(() => 
+    this.actions$.pipe(
+      ofType(loadPurchaseOrderById),
+      mergeMap( action =>
+        from(this.getPurchaseOrderByIdUseCase.execute(action.purchaseId)).pipe(
+          map( (result: PurchaseOrder | Failure) => {
+            if (result instanceof Failure) {
+              return (setPurchaseOrderError({error:result}));
+            }
+            console.log(result);
+            
+            return loadedPurchaseOrderById({purchase: result})
           })
         )
       )
