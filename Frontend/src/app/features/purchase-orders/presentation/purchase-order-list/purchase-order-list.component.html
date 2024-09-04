@@ -24,8 +24,8 @@
             <td>{{ purchase.deliveryDate | formatDate }}</td>
             <td>
               <p-button icon="pi pi-search" class="mr-2"></p-button>
-              <p-button icon="pi pi-pencil" class="mr-2"></p-button>
-              <button pButton type="button" icon="pi pi-trash" size="small" class="p-button-danger"></button>
+              <p-button icon="pi pi-pencil" class="mr-2" (onClick)="onUpdate(purchase)"></p-button>
+              <button pButton type="button" icon="pi pi-trash" size="small" class="p-button-danger" (click)="onDelete(purchase)"></button>
             </td>
           </tr>
         </ng-template>

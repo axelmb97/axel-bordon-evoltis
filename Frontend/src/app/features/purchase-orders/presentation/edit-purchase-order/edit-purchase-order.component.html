@@ -1,1 +1,19 @@
-<p>edit-purchase-order works!</p>
+
+<section class="flex justify-content-center">
+  <section class="w-35rem bg-white border-round-md shadow-1 p-4">
+    <article class="flex justify-content-between justify-content-center">
+      <div class="flex justify-content-center">
+        <h3>Ingrese datos de la orden</h3>
+      </div>
+      <div>
+        <p-button  label="Guardar" (onClick)="onSavePurchaseOrder()"></p-button>
+      </div>
+    </article>
+    <article class="mt-4">
+      <p-steps [model]="items" [readonly]="false"></p-steps>
+    </article>
+    <article>
+      <router-outlet></router-outlet>
+    </article>
+  </section>
+</section>

@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
     this.selectAppState();
     this.store.dispatch(laodSuppliers());
     this.store.dispatch(loadProducts());
-    this.store.dispatch(loadEmployees());
+    this.store.dispatch(loadEmployees());    
   }
   
   selectAppState() : void {

@@ -32,8 +32,6 @@ export class AddPurchaseOrderComponent implements OnInit{
   ngOnInit(): void {
     this.initItems();
     this.selectCurrenPurchase();
-    this.selectPurchaseError();
-    this.selectPurchaseSuccess();
   }
 
   initItems() : void {
@@ -56,39 +54,6 @@ export class AddPurchaseOrderComponent implements OnInit{
     });
   }
 
-  selectPurchaseSuccess() : void {
-    this.store.select(selectPurchaseOrderSuccess).subscribe(message => {
-      if (message.length == 0) return;
-      console.log("LLEGUE");
-      
-      this.messageService.add({
-        severity: 'success',
-        life: 3000,
-        summary: 'Éxito',
-        detail: message
-      });
-
-      this.store.dispatch(cleanOrder());
-      this.redirectToPurchaseOrderList();
-    })
-  }
-
-  redirectToPurchaseOrderList() : void {
-    setTimeout(() => {
-      this.router.navigate(['purchase-orders']);
-    }, 3000);
-  }
-
-  selectPurchaseError() : void {
-    this.store.select(selectPurchaseOrderError).subscribe( error => {
-      this.messageService.add({
-        severity: 'error',
-        life: 3000,
-        summary: 'Error',
-        detail: error?.message
-      });
-    });
-  }
   onSavePurchaseOrder() : void {
     if (!this.validPurchase()) {
       this.messageService.add({

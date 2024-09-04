@@ -40,6 +40,8 @@ import { PurchaseOrderEffects } from './core/manager/effects/purchase-order.effe
 import { PurchaseGeneralDataComponent } from './features/purchase-orders/presentation/purchase-general-data/purchase-general-data.component';
 import { PurchaseDetailsComponent } from './features/purchase-orders/presentation/purchase-details/purchase-details.component';
 import { PurchaseOrderDetailModalComponent } from './features/purchase-orders/presentation/purchase-order-detail-modal/purchase-order-detail-modal.component';
+import { DeletePurchaseOrderUseCase } from './features/purchase-orders/domain/usecases/delete-purchase-order.usecase';
+import { GetPaginatedPurchaseOrderDetailsUseCase } from './features/purchase-orders/domain/usecases/get-paginated-purchase-order-details.usecase';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +76,8 @@ import { PurchaseOrderDetailModalComponent } from './features/purchase-orders/pr
     GetAllEmployeesUseCase,
     {provide: PurchaseOrderRemoteDataSourceBase, useClass: PurchaseOrderRemoteDataSource},
     {provide: PurchaseOrderRepositoryBase, useClass: PurchaseOrderRepository},
-    CreatePurchaseOrderUseCase, GetPaginatedPurchaseOrdersUseCase
+    CreatePurchaseOrderUseCase, GetPaginatedPurchaseOrdersUseCase, DeletePurchaseOrderUseCase,
+    GetPaginatedPurchaseOrderDetailsUseCase
   ],
   bootstrap: [AppComponent]
 })

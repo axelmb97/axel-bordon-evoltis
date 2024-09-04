@@ -21,7 +21,14 @@ const routes: Routes = [
           { path:'details', component: PurchaseDetailsComponent} 
         ]
       },
-      {path: ':id', component: EditPurchaseOrderComponent}
+      {
+        path: ':id', 
+        component: EditPurchaseOrderComponent,
+        children: [
+          { path:'general', component: PurchaseGeneralDataComponent},
+          { path:'details', component: PurchaseDetailsComponent} 
+        ]
+      }
     ]
   }
 ];

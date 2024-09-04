@@ -7,10 +7,11 @@ import { PurchaseOrderRemoteDataSourceBase } from "../data-sources/purchase-orde
 import { filter } from "rxjs";
 import { UnhandledFailure } from "src/app/core/failures/unhandled.failure";
 import { CreatePurchaseOrder } from "../../domain/entities/create-purchase-order.entity";
+import { PaginatedPurchaseOrderDetails } from "../../domain/entities/paginated-purchase-order-details.entity";
+import { PurchaseOrderDetailFilters } from "../../domain/entities/purchase-order-deatil-filters.entoty";
 
 @Injectable()
 export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
-
 
   constructor(private purchaseOrderRemoteDataSource: PurchaseOrderRemoteDataSourceBase){
     super();
@@ -28,7 +29,22 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
     try {
       return await this.purchaseOrderRemoteDataSource.createPurchaseOrder(purchaseOrder);
     } catch (error:any) {
-      console.log("ERROR", error);
+      return new UnhandledFailure();
+    }
+  }
+
+  override async deletePurchaseOrder(purchaseOrderId: number): Promise<boolean | Failure> {
+    try {
+      return await this.purchaseOrderRemoteDataSource.deletePurchseOrder(purchaseOrderId);
+    } catch (error:any) {
+      return new UnhandledFailure();
+    }
+  }
+
+  override async getPaginatedPurchaseOrderDetails(filters: PurchaseOrderDetailFilters): Promise<PaginatedPurchaseOrderDetails | Failure> {
+    try {
+      return await this.purchaseOrderRemoteDataSource.getPaginatedPurchaseOrderDetails(filters);
+    } catch (error:any) {
       return new UnhandledFailure();
     }
   }

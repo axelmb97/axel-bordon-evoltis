@@ -5,7 +5,8 @@ export abstract class CreatePurchaseOrderDetail extends Entity {
   constructor(
     public productId: number,
     public quantity: number,
-    public priceByUnit: number
+    public priceByUnit: number,
+    public id?: number
   ){
     super();
   }

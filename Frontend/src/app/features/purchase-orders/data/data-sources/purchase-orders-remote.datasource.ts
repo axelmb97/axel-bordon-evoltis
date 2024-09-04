@@ -6,10 +6,15 @@ import { environment } from "src/environments/environment.development";
 import { PaginatedPurchaseOrdersModel } from "../models/paginated-purchases.model";
 import { CreatePurchaseOrder } from "../../domain/entities/create-purchase-order.entity";
 import { CreatePurchaseOrderModel } from "../models/create-purchase-order.model";
+import { PurchaseOrderDetailFilters } from "../../domain/entities/purchase-order-deatil-filters.entoty";
+import { PaginatedPurchaseOrderDetails } from "../../domain/entities/paginated-purchase-order-details.entity";
+import { PaginatedPurchaseOrderDetailsModel } from "../models/paginated-purchase-order-details.model";
 
 export abstract class PurchaseOrderRemoteDataSourceBase {
   abstract getPaginatedPurchaseOrders(filters: PurchaseOrderFilters): Promise<PaginatedPurchaseOrders>;
   abstract createPurchaseOrder(purchaseOrder: CreatePurchaseOrder): Promise<boolean>;
+  abstract deletePurchseOrder(purchaseId: number): Promise<boolean>;
+  abstract getPaginatedPurchaseOrderDetails(filters:PurchaseOrderDetailFilters): Promise<PaginatedPurchaseOrderDetails>;
 }
 
 @Injectable()
@@ -35,8 +40,20 @@ export class PurchaseOrderRemoteDataSource extends PurchaseOrderRemoteDataSource
     if (purchaseOrder.details) {
       p.details = [...purchaseOrder.details]; // Copiar el array de detalles
     }
-    console.log("DATA SPURCE", p);
+
     let result = await this.httpService.post(this.url, p);
     return result.get("response");
+  }
+
+  override async deletePurchseOrder(purchaseId: number): Promise<boolean> {
+    let result = await this.httpService.delete(`${this.url}/${purchaseId}`);
+    return result.get("response")
+  }
+
+  override async getPaginatedPurchaseOrderDetails(filters: PurchaseOrderDetailFilters): Promise<PaginatedPurchaseOrderDetails> {
+    let pathUrl: string = `${this.url}${filters.getPath()}`    
+    let result = await this.httpService.get(pathUrl);
+    let map = new Map<string,any>(Object.entries(result.get("response")));
+    return PaginatedPurchaseOrderDetailsModel.fromJson(map);
   }
 }
