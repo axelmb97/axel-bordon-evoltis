@@ -42,3 +42,7 @@ export const addPurchaseOrderDetail = createAction(
   PurchaseOrderActionName.ADD_PURCHASE_DEETAIL,
   props<{detail: CreatePurchaseOrderDetail}>()
 );
+
+export const cleanOrder = createAction(
+  PurchaseOrderActionName.CLEAN_ORDER
+);

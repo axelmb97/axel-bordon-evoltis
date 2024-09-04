@@ -57,5 +57,8 @@ export const purchaseOrderReducers = createReducer(
     purchase.details = [...purchase.details!, prop.detail];
     
     return {...state, currentPurchase: purchase}
+  }),
+  on(PurchaseOrderActions.cleanOrder, (state) => {
+    return {...state, error: undefined, success: '', currentPurchase: undefined}
   })
 );

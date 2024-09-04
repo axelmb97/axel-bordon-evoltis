@@ -5,7 +5,7 @@
           (click)="addDetail()"></button>
     </article>
     <article >
-        <p-table [value]="currentPurchaseOrder?.details || []">
+        <p-table [value]="currentPurchaseOrder?.details || []"  styleClass="p-datatable-sm">
           <ng-template pTemplate="header">
             <tr>
               <th>Cantidad</th>

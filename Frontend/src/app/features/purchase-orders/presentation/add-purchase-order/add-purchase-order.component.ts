@@ -10,7 +10,7 @@ import { selectSuppliers } from 'src/app/core/manager/selectors/supplier.selecto
 import { Product } from 'src/app/features/products/domain/entities/product.entity';
 import { Supplier } from 'src/app/features/suppliers/domain/entities/supplier.entity';
 import { CreatePurchaseOrder } from '../../domain/entities/create-purchase-order.entity';
-import { createPurchaseOrder } from 'src/app/core/manager/actions/purchase-orders.actions';
+import { cleanOrder, createPurchaseOrder } from 'src/app/core/manager/actions/purchase-orders.actions';
 import { Router } from '@angular/router';
 
 @Component({
@@ -68,6 +68,7 @@ export class AddPurchaseOrderComponent implements OnInit{
         detail: message
       });
 
+      this.store.dispatch(cleanOrder());
       this.redirectToPurchaseOrderList();
     })
   }
