@@ -29,7 +29,7 @@ namespace Infraestructure.Persistence.Repositories
 
         public async Task<PurchaseOrderEntity> GetById(int id)
         {
-            return await _dbContext.PurchaseOrders.Include(po => po.Details).Include(p => p.Reception).FirstOrDefaultAsync(po => po.Id.Equals(id));
+            return await _dbContext.PurchaseOrders.Include(po => po.Details).ThenInclude(d => d.Product).Include(p => p.Supplier).Include(p => p.Reception).FirstOrDefaultAsync(po => po.Id.Equals(id));
         }
 
         public async Task<Pagination<PurchaseOrderEntity>> GetFilteredDeliveries(PurchaseOrderFiltersDto filters)

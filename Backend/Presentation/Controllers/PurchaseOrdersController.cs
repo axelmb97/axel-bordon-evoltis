@@ -3,6 +3,7 @@ using Application.PurchaseOrders.Commands.CreatePurchaseOrder;
 using Application.PurchaseOrders.Commands.DeletePurchaseOrder;
 using Application.PurchaseOrders.Commands.UpdatePurchaseOrder;
 using Application.PurchaseOrders.Queries.GetFilteredPurchaseOrders;
+using Application.PurchaseOrders.Queries.GetPurchaseOrderById;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,12 @@ namespace Presentation.Controllers
 
         [HttpGet]
         public async Task<IActionResult> GetPurchasesOrders([FromQuery] GetFilteredPurchaseOrdersQuery query)
+        {
+            var result = await _mediator.Send(query);
+            return StatusCode(result.StatusCode, result);
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPurchasesOrderById([FromRoute] GetPurchaseOrderByIdQuery query)
         {
             var result = await _mediator.Send(query);
             return StatusCode(result.StatusCode, result);
