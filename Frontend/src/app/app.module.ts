@@ -54,6 +54,7 @@ import { ReceptionRepository } from './features/receptions/data/repositories/rec
 import { GetPaginatedReceptionsUseCase } from './features/receptions/domain/usecases/get-paginated-receptions.usecase';
 import { ReceptionEffects } from './core/manager/effects/reception.effects';
 import { GetReceptionByIdUseCase } from './features/receptions/domain/usecases/get-reception-by-id.usecase';
+import { ReceptionDetailsViewComponent } from './features/receptions/presentation/reception-details-view/reception-details-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +69,8 @@ import { GetReceptionByIdUseCase } from './features/receptions/domain/usecases/g
     PuchaseDetailsViewComponent,
     PurchaseOrderFiltersComponent,
     ReceptiosIndexComponent,
-    ReceptionsListComponent
+    ReceptionsListComponent,
+    ReceptionDetailsViewComponent
   ],
   imports: [
     BrowserModule,

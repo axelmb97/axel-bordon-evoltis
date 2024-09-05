@@ -5,7 +5,7 @@ import { ReceptionFiltersModel } from '../../data/models/reception-filters.model
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/core/manager/app.state';
 import { selectReceptionFilters, selectReceptionPagination } from 'src/app/core/manager/selectors/reception.selectors';
-import { loadReceptions } from 'src/app/core/manager/actions/receptions.actions';
+import { loadReceptionById, loadReceptions } from 'src/app/core/manager/actions/receptions.actions';
 import { Reception } from '../../domain/entities/reception.entity';
 import { PaginatorState } from 'primeng/paginator';
 
@@ -60,6 +60,7 @@ export class ReceptionsListComponent implements OnInit{
   
   onShowDetails(reception: Reception) : void {
     this.showModal = true;
+    this.store.dispatch(loadReceptionById({id: reception.id}));
   }
 
   onUpdate(reception: Reception) : void {

@@ -1,0 +1,47 @@
+<section>
+  <section>
+    <article>
+      <div class="py-2">
+        <h4>Datos generales</h4>
+      </div>
+      <div class="mb-2">
+        <p>Empleado: </p>
+        <p>{{reception?.employee?.lastname }}, {{reception?.employee?.name}}</p>
+      </div>
+      <div>
+        <p>Fecha de Recepción: </p>
+        <p>{{reception?.createdAt! | formatDate}}</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="py-2">
+        <h4>Detalles</h4>
+      </div>
+      <div>
+        <p-table [value]="reception?.details || []"  styleClass="p-datatable-sm">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad Recibida</th>
+              <th>Descripción</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-reception let-i="rowIndex">
+            <tr>
+              <td>
+                <p>{{ reception.product.name}}</p>
+              </td>
+              <td>
+                <p>{{ reception.quantityReceived}}</p>
+              </td>
+              <td>
+                <p>{{ reception.descrpition}}</p>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </article>
+  </section>
+</section>
