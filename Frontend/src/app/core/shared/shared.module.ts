@@ -18,9 +18,11 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { StepsModule } from 'primeng/steps';
 import { MessageService } from 'primeng/api';
 import { DialogModule } from 'primeng/dialog';
+import { FiltersComponent } from './filters/filters.component';
 @NgModule({
   declarations: [
-    SidebarComponent
+    SidebarComponent,
+    FiltersComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { DialogModule } from 'primeng/dialog';
     TableModule,
     PaginatorModule,
     MessagesModule,
-    ToastModule
+    ToastModule,
+    DialogModule
   ],
   exports: [
     FormsModule,
@@ -51,7 +54,8 @@ import { DialogModule } from 'primeng/dialog';
     CalendarModule,
     InputNumberModule,
     StepsModule,
-    DialogModule
+    DialogModule,
+    FiltersComponent
   ],
   providers: [MessageService, DialogService]
 })

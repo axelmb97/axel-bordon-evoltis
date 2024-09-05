@@ -2,7 +2,10 @@
   <section class="table-container">
     <article class="flex justify-content-between py-3">
       <div>
-        <button pButton type="button" icon="pi pi-filter" label="Filtrar" size="small"></button>
+        <button pButton type="button" icon="pi pi-filter" label="Filtrar" size="small" (click)="onShowFilters()"></button>
+          <app-filters [showFilters]="showFilters" (closeModal)="onCloseFilters()">
+            <app-purchase-order-filters ></app-purchase-order-filters>
+          </app-filters>
       </div>
       <div>
         <button pButton type="button" icon="pi pi-plus" label="Agregar" size="small" class="p-button-success"
@@ -39,8 +42,11 @@
     </article>
   </section>
 </section>
-<p-dialog header="Detalles de órden" [(visible)]="showModal" [modal]="true" [style]="{ width: '50vw',height: '80%' }" [draggable]="false" [resizable]="false" (onHide)="onCloseModal()">
+<p-dialog header="Detalles de Orden" [(visible)]="showModal" [modal]="true" [style]="{ width: '50vw',height: '80%' }" [draggable]="false" [resizable]="false" (onHide)="onCloseModal()">
   <app-puchase-details-view></app-puchase-details-view>
 </p-dialog>
+
+
+
 
 

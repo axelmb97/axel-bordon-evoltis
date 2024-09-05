@@ -28,3 +28,8 @@ export const selectCurrentPurchaseOrder = createSelector(
   selectPurchaseOrderFeature,
   (state: PurchaseOrdersState) => state.currentPurchase
 );
+
+export const selectPurchaseOrderFilters = createSelector(
+  selectPurchaseOrderFeature,
+  (state: PurchaseOrdersState) => state.filters
+);

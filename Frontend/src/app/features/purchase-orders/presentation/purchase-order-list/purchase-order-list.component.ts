@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { cleanOrder, deletePurchase, loadPurchaseOrderById, loadPurchaseOrderDetails, loadPurchaseOrders } from 'src/app/core/manager/actions/purchase-orders.actions';
 import { PurchaseOrderFiltersModel } from '../../data/models/purchase-order-filters.model';
-import { selectPaginatedPurchaseOrders, selectPurchaseOrderSuccess } from 'src/app/core/manager/selectors/purchase-order.selectors';
+import { selectPaginatedPurchaseOrders, selectPurchaseOrderFilters, selectPurchaseOrderSuccess } from 'src/app/core/manager/selectors/purchase-order.selectors';
 import { PaginatorState } from 'primeng/paginator';
 import { PurchaseOrderModel } from '../../data/models/purchase-order.model';
 import { PurchaseOrderDetailFiltersModel } from '../../data/models/purchase-order-detail-filters.model';
@@ -24,7 +24,7 @@ export class PurchaseOrderListComponent implements OnInit{
   rows: number = 5;
   items?: MenuItem[];
   showModal: boolean = false;
-
+  showFilters: boolean = false;
   constructor(
     private store: Store<AppState>,
     private router: Router,
@@ -35,6 +35,7 @@ export class PurchaseOrderListComponent implements OnInit{
     this.initFilters();
     this.selectPurchaOrders();
     this.getPaginatedPurchaseOrders();
+    this.selectPurchaseOrderFilters();
   }
 
   initFilters() : void {
@@ -50,6 +51,13 @@ export class PurchaseOrderListComponent implements OnInit{
 
   getPaginatedPurchaseOrders() : void {
     this.store.dispatch(loadPurchaseOrders({filters: this.filters!}));
+  }
+
+  selectPurchaseOrderFilters() : void {
+    this.store.select(selectPurchaseOrderFilters).subscribe( filters => {
+      if (!filters) return;
+      this.filters = filters;
+    });
   }
 
   onAddPurchaseOrder() : void {
@@ -77,5 +85,13 @@ export class PurchaseOrderListComponent implements OnInit{
     this.filters = this.filters?.clone();
     this.filters!.page = event.page! + 1;
     this.getPaginatedPurchaseOrders();
+  }
+
+  onShowFilters() : void {
+    this.showFilters = true;
+  }
+
+  onCloseFilters() : void {
+    this.showFilters = false;
   }
 }

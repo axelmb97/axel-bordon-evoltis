@@ -1,0 +1,14 @@
+:host ::ng-deep .p-datepicker {  
+  transform: scale(0.55) translateX(-35%) translateY(20%);
+}
+
+.filters {
+  height: 90%;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;  
+}
+
+.filters::-webkit-scrollbar {
+  display: none; 
+}

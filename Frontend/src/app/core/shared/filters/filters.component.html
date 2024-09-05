@@ -1,0 +1,6 @@
+
+<p-dialog header="Filtros" [(visible)]="showFilters" [style]="{ width: '18rem',height: '28rem' }" [draggable]="true" [resizable]="false"  (onHide)="onCloseFilters()">
+  <section class="w-full h-full">
+      <ng-content></ng-content>
+  </section>
+</p-dialog>

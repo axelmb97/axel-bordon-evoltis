@@ -1,0 +1,31 @@
+<section  class="w-full h-full relative">
+  <section class="w-full h-full">
+    <article class="filters">
+      <form [formGroup]="filtersForm">
+        <div class="card flex justify-content-center mb-2">
+          <div class="flex flex-column w-full">
+              <label htmlFor="username" class="pb-1">Proveedor</label>
+              <input formControlName="businessName" pInputText/>
+          </div>
+        </div>
+        <div class="card flex justify-content-center mb-2">
+          <div class="flex flex-column w-full">
+              <label htmlFor="username" class="pb-1">Desde</label>
+              <p-calendar formControlName="from"  [minDate]="minDate" dateFormat="dd/mm/yy" [style]="{'width':'100%'}" > </p-calendar>
+          </div>
+        </div>
+        <div class="card flex justify-content-center mb-2">
+          <div class="flex flex-column w-full">
+              <label htmlFor="username" class="pb-1">Hasta</label>
+              <p-calendar formControlName="to"  [minDate]="minDate"  [style]="{'width':'100%'}" dateFormat="dd/mm/yy"></p-calendar>
+          </div>
+        </div>
+      </form>
+    </article>
+    <article class="flex justify-content-between">
+      <p-button label="Limpiar" (onClick)="onCleanFilters()"></p-button>
+      <p-button label="FILTRAR" (onClick)="onFilter()"></p-button>
+    </article>
+  </section>
+ 
+</section>

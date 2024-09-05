@@ -44,6 +44,8 @@ import { DeletePurchaseOrderUseCase } from './features/purchase-orders/domain/us
 import { GetPaginatedPurchaseOrderDetailsUseCase } from './features/purchase-orders/domain/usecases/get-paginated-purchase-order-details.usecase';
 import { GetPurchaseOrderByIdUseCase } from './features/purchase-orders/domain/usecases/get-purchase-order-by-id.usecase';
 import { UpdatePurchaseOrderUseCase } from './features/purchase-orders/domain/usecases/update-purchase-order.usecase';
+import { PuchaseDetailsViewComponent } from './features/purchase-orders/presentation/puchase-details-view/puchase-details-view.component';
+import { PurchaseOrderFiltersComponent } from './features/purchase-orders/presentation/purchase-order-filters/purchase-order-filters.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,9 @@ import { UpdatePurchaseOrderUseCase } from './features/purchase-orders/domain/us
     PurchaseOrderListComponent,
     PurchaseGeneralDataComponent,
     PurchaseDetailsComponent,
-    PurchaseOrderDetailModalComponent
+    PurchaseOrderDetailModalComponent,
+    PuchaseDetailsViewComponent,
+    PurchaseOrderFiltersComponent
   ],
   imports: [
     BrowserModule,
