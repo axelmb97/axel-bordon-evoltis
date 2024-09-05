@@ -48,6 +48,10 @@ import { PuchaseDetailsViewComponent } from './features/purchase-orders/presenta
 import { PurchaseOrderFiltersComponent } from './features/purchase-orders/presentation/purchase-order-filters/purchase-order-filters.component';
 import { ReceptiosIndexComponent } from './features/receptions/presentation/receptios-index/receptios-index.component';
 import { ReceptionsListComponent } from './features/receptions/presentation/receptions-list/receptions-list.component';
+import { ReceptionRemoteDataSource, ReceptionRemoteDataSourceBase } from './features/receptions/data/data-sources/reception-remote.datasource';
+import { ReceptionRepositoryBase } from './features/receptions/domain/repositories/reception-base.repository';
+import { ReceptionRepository } from './features/receptions/data/repositories/reception.repository';
+import { GetPaginatedReceptionsUseCase } from './features/receptions/domain/usecases/get-paginated-receptions.usecase';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +91,10 @@ import { ReceptionsListComponent } from './features/receptions/presentation/rece
     {provide: PurchaseOrderRemoteDataSourceBase, useClass: PurchaseOrderRemoteDataSource},
     {provide: PurchaseOrderRepositoryBase, useClass: PurchaseOrderRepository},
     CreatePurchaseOrderUseCase, GetPaginatedPurchaseOrdersUseCase, DeletePurchaseOrderUseCase,
-    GetPaginatedPurchaseOrderDetailsUseCase, GetPurchaseOrderByIdUseCase, UpdatePurchaseOrderUseCase
+    GetPaginatedPurchaseOrderDetailsUseCase, GetPurchaseOrderByIdUseCase, UpdatePurchaseOrderUseCase,
+    {provide: ReceptionRemoteDataSourceBase, useClass: ReceptionRemoteDataSource},
+    {provide: ReceptionRepositoryBase, useClass: ReceptionRepository},
+    GetPaginatedReceptionsUseCase
   ],
   bootstrap: [AppComponent]
 })
