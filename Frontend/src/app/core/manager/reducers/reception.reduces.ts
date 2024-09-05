@@ -8,6 +8,7 @@ export const initialState : ReceptionsState = {
   loading: false,
   receptionsPagination: undefined,
   filters: undefined,
+  receptionById: undefined,
   success: '',
   error: undefined,
 }
@@ -26,4 +27,10 @@ export const receptionReducers = createReducer(
   on(ReceptionActions.setReceptionSucces, (state, prop) => {
     return {...state, loading: false, success: prop.message}
   }),
+  on(ReceptionActions.loadReceptionById, (state) => {
+    return {...state, loading: true}
+  }),
+  on(ReceptionActions.loadedReceptionById, (state, prop) => {
+    return {...state, loading: true, receptionById: prop.reception}
+  })
 );

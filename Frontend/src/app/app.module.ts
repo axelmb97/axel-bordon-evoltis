@@ -53,6 +53,7 @@ import { ReceptionRepositoryBase } from './features/receptions/domain/repositori
 import { ReceptionRepository } from './features/receptions/data/repositories/reception.repository';
 import { GetPaginatedReceptionsUseCase } from './features/receptions/domain/usecases/get-paginated-receptions.usecase';
 import { ReceptionEffects } from './core/manager/effects/reception.effects';
+import { GetReceptionByIdUseCase } from './features/receptions/domain/usecases/get-reception-by-id.usecase';
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,7 +96,7 @@ import { ReceptionEffects } from './core/manager/effects/reception.effects';
     GetPaginatedPurchaseOrderDetailsUseCase, GetPurchaseOrderByIdUseCase, UpdatePurchaseOrderUseCase,
     {provide: ReceptionRemoteDataSourceBase, useClass: ReceptionRemoteDataSource},
     {provide: ReceptionRepositoryBase, useClass: ReceptionRepository},
-    GetPaginatedReceptionsUseCase
+    GetPaginatedReceptionsUseCase, GetReceptionByIdUseCase
   ],
   bootstrap: [AppComponent]
 })

@@ -47,6 +47,7 @@ export class ReceptiosIndexComponent implements OnInit{
 
   selectPurchaseError() : void {
     this.store.select(selectPurchaseOrderError).subscribe( error => {
+
       if (!error) return;
       this.messageService.add({
         severity: 'error',

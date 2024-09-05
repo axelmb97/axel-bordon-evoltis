@@ -3,6 +3,7 @@ import { ReceptionActionName } from "./reception-action-names";
 import { ReceptionFilters } from "src/app/features/receptions/domain/entities/reception-filters.entity";
 import { PaginatedReceptions } from "src/app/features/receptions/domain/entities/paginated-receptions.entity";
 import { Failure } from "../../failures/failure";
+import { Reception } from "src/app/features/receptions/domain/entities/reception.entity";
 
 export const loadReceptions = createAction(
   ReceptionActionName.LOAD_PAGINATED_PURCHASES,
@@ -22,4 +23,14 @@ export const setReceptionError = createAction(
 export const setReceptionSucces = createAction(
   ReceptionActionName.SET_RECEPTION_SUCCESS,
   props<{message:string}>()
+);
+
+export const loadReceptionById = createAction(
+  ReceptionActionName.LOAD_RECEPTION_BY_ID,
+  props<{id:number}>()
+);
+
+export const loadedReceptionById = createAction(
+  ReceptionActionName.LOADED_RECEPTION_BY_ID,
+  props<{reception: Reception}>()
 );

@@ -28,3 +28,8 @@ export const selectReceptionSuccess = createSelector(
   selectReceptionFeature,
   (state: ReceptionsState) => state.success
 );
+
+export const selectReceptionById = createSelector(
+  selectReceptionFeature,
+  (state: ReceptionsState) => state.receptionById
+);
