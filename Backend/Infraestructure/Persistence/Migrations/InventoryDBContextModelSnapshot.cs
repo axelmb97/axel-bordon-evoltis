@@ -3,7 +3,6 @@ using System;
 using Infraestructure.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -18,51 +17,45 @@ namespace Infraestructure.Persistence.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.18")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Domain.Entities.EmployeeEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("File")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Lastname")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Employees");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4737),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7140),
                             File = "abordon",
                             Lastname = "Bordon Alvarez",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -72,7 +65,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4752),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7163),
                             File = "vherrera",
                             Lastname = "Herrera",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -82,7 +75,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4753),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7164),
                             File = "lbordon",
                             Lastname = "Bordon",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -95,34 +88,31 @@ namespace Infraestructure.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4880),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7372),
                             Description = "16 RAM 256gb",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Notebook Bangho"
@@ -130,7 +120,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4881),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7374),
                             Description = "128GB almacenamiento, 6GB RAM",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Smartphone Samsung Galaxy"
@@ -138,7 +128,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4882),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7375),
                             Description = "256GB almacenamiento, pantalla Retina",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Tablet Apple iPad"
@@ -146,7 +136,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4883),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7376),
                             Description = "Full HD, 75Hz, IPS",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Monitor Dell 24\""
@@ -154,7 +144,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4884),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7377),
                             Description = "RGB, switches mecánicos",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Teclado mecánico Logitech"
@@ -162,7 +152,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4884),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7378),
                             Description = "DPI ajustable, 2.4GHz",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Mouse inalámbrico Razer"
@@ -170,7 +160,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4885),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7379),
                             Description = "1TB, NVMe M.2",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Disco SSD Kingston"
@@ -178,7 +168,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4885),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7380),
                             Description = "Cancelación de ruido, Bluetooth",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Auriculares Bose"
@@ -186,7 +176,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4886),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7381),
                             Description = "24MP, 4K video, lente 18-55mm",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Cámara Sony Alpha"
@@ -194,7 +184,7 @@ namespace Infraestructure.Persistence.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4886),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7382),
                             Description = "GPS, 44mm, resistente al agua",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Smartwatch Apple Watch"
@@ -205,19 +195,16 @@ namespace Infraestructure.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<decimal>("PriceByUnit")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<int>("ProductEntityId")
                         .HasColumnType("int");
@@ -234,26 +221,23 @@ namespace Infraestructure.Persistence.Migrations
 
                     b.HasIndex("PurchaseOrderEntityId");
 
-                    b.ToTable("PurchaseOrderDetails", (string)null);
+                    b.ToTable("PurchaseOrderDetails");
                 });
 
             modelBuilder.Entity("Domain.Entities.PurchaseOrderEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DeliveryDate")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("SupplierEntityId")
                         .HasColumnType("int");
@@ -262,26 +246,23 @@ namespace Infraestructure.Persistence.Migrations
 
                     b.HasIndex("SupplierEntityId");
 
-                    b.ToTable("PurchaseOrders", (string)null);
+                    b.ToTable("PurchaseOrders");
                 });
 
             modelBuilder.Entity("Domain.Entities.ReceptionDetailEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("ProductEntityId")
                         .HasColumnType("int");
@@ -298,26 +279,23 @@ namespace Infraestructure.Persistence.Migrations
 
                     b.HasIndex("ReceptionEntityId");
 
-                    b.ToTable("ReceptionDetails", (string)null);
+                    b.ToTable("ReceptionDetails");
                 });
 
             modelBuilder.Entity("Domain.Entities.ReceptionEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("EmployeeEntityId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("PurchaseOrderEntityId")
                         .HasColumnType("int");
@@ -329,26 +307,23 @@ namespace Infraestructure.Persistence.Migrations
                     b.HasIndex("PurchaseOrderEntityId")
                         .IsUnique();
 
-                    b.ToTable("Receptions", (string)null);
+                    b.ToTable("Receptions");
                 });
 
             modelBuilder.Entity("Domain.Entities.StockEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("AvailableQuantity")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("ProductEntityId")
                         .HasColumnType("int");
@@ -360,39 +335,36 @@ namespace Infraestructure.Persistence.Migrations
 
                     b.HasIndex("ProductEntityId");
 
-                    b.ToTable("Stocks", (string)null);
+                    b.ToTable("Stocks");
                 });
 
             modelBuilder.Entity("Domain.Entities.SupplierEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1L)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("BusinessName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2(6)");
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Suppliers", (string)null);
+                    b.ToTable("Suppliers");
 
                     b.HasData(
                         new
@@ -400,7 +372,7 @@ namespace Infraestructure.Persistence.Migrations
                             Id = 1,
                             Address = "1234 Tech Park Avenue, San Francisco, CA",
                             BusinessName = "Tech Distributions Inc.",
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4906),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7412),
                             Description = "Distribuidor de hardware y componentes electrónicos",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -409,7 +381,7 @@ namespace Infraestructure.Persistence.Migrations
                             Id = 2,
                             Address = "5678 Innovation Blvd, Austin, TX",
                             BusinessName = "Gadget World",
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4907),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7414),
                             Description = "Proveedor de gadgets y accesorios electrónicos",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -418,7 +390,7 @@ namespace Infraestructure.Persistence.Migrations
                             Id = 3,
                             Address = "91011 Silicon Valley, Palo Alto, CA",
                             BusinessName = "CompuParts Ltd.",
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4908),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7416),
                             Description = "Especialistas en componentes para PCs y laptops",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -427,7 +399,7 @@ namespace Infraestructure.Persistence.Migrations
                             Id = 4,
                             Address = "1213 Tech Drive, New York, NY",
                             BusinessName = "Global Tech Supplies",
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4909),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7417),
                             Description = "Proveedor global de soluciones tecnológicas",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -436,7 +408,7 @@ namespace Infraestructure.Persistence.Migrations
                             Id = 5,
                             Address = "1415 Digital Lane, Seattle, WA",
                             BusinessName = "Smart Solutions Co.",
-                            CreatedAt = new DateTime(2024, 9, 2, 23, 47, 38, 904, DateTimeKind.Local).AddTicks(4909),
+                            CreatedAt = new DateTime(2024, 9, 5, 8, 35, 22, 347, DateTimeKind.Local).AddTicks(7419),
                             Description = "Proveedor de dispositivos inteligentes y tecnología IoT",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
