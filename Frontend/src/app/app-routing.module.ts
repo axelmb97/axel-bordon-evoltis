@@ -6,6 +6,8 @@ import { EditPurchaseOrderComponent } from './features/purchase-orders/presentat
 import { PurchaseOrderListComponent } from './features/purchase-orders/presentation/purchase-order-list/purchase-order-list.component';
 import { PurchaseGeneralDataComponent } from './features/purchase-orders/presentation/purchase-general-data/purchase-general-data.component';
 import { PurchaseDetailsComponent } from './features/purchase-orders/presentation/purchase-details/purchase-details.component';
+import { ReceptiosIndexComponent } from './features/receptions/presentation/receptios-index/receptios-index.component';
+import { ReceptionsListComponent } from './features/receptions/presentation/receptions-list/receptions-list.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,17 @@ const routes: Routes = [
         ]
       }
     ]
+  },
+  {
+    path: 'receptions',
+    component: ReceptiosIndexComponent,
+    children: [
+      {path: '', component: ReceptionsListComponent},
+    ]
+  },
+  {
+    path: '**',
+    redirectTo: 'purchase-orders'
   }
 ];
 

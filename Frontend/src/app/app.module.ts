@@ -46,6 +46,8 @@ import { GetPurchaseOrderByIdUseCase } from './features/purchase-orders/domain/u
 import { UpdatePurchaseOrderUseCase } from './features/purchase-orders/domain/usecases/update-purchase-order.usecase';
 import { PuchaseDetailsViewComponent } from './features/purchase-orders/presentation/puchase-details-view/puchase-details-view.component';
 import { PurchaseOrderFiltersComponent } from './features/purchase-orders/presentation/purchase-order-filters/purchase-order-filters.component';
+import { ReceptiosIndexComponent } from './features/receptions/presentation/receptios-index/receptios-index.component';
+import { ReceptionsListComponent } from './features/receptions/presentation/receptions-list/receptions-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,9 @@ import { PurchaseOrderFiltersComponent } from './features/purchase-orders/presen
     PurchaseDetailsComponent,
     PurchaseOrderDetailModalComponent,
     PuchaseDetailsViewComponent,
-    PurchaseOrderFiltersComponent
+    PurchaseOrderFiltersComponent,
+    ReceptiosIndexComponent,
+    ReceptionsListComponent
   ],
   imports: [
     BrowserModule,

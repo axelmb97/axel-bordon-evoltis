@@ -1,6 +1,13 @@
-<section class="w-full h-screen bg-black">
-  <section class="h-8rem">
-
+<section class="w-full h-screen bg-black relative">
+  <section class="h-8rem flex justify-conten-center align-content-center flex-wrap pt-4">
+    <article>
+      <div class="w-4rem h-auto">
+        <img class="w-full h-full" src="../../../../assets/inventario.png" alt="Logo">
+      </div>
+    </article>
+    <article class="flex align-content-center">
+      <h2 class="pl-2 title">Inventory app</h2>
+    </article>
   </section>
   <section class="flex flex-column">
     <article class="navbar-item py-3 pl-3 w-full" (click)="onNavigate('purchase-orders')">
@@ -12,5 +19,8 @@
     <article class="navbar-item py-3 pl-3 w-full" (click)="onNavigate('stocks')">
       <a>STOCK</a>
     </article>
+  </section>
+  <section class="absolute bottom-0 w-full">
+    <p class="w-full text-center py-2 text-white">evoltis - 2024</p>
   </section>
 </section>

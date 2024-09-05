@@ -1,14 +1,25 @@
+$sidebar-color: #343a40;
+$white: #FFF;
+$body-bg-color: #E0E0E0;
 .navbar-item  {
-  color: #FFF;
+  color: $white;
   cursor: pointer;
   transition: all .3s ease-in-out;
 }
 
 .navbar-item:hover {
-  background-color: #FFF;
-  color: #343a40;
+  background-color: $body-bg-color;
+  color: $sidebar-color;
 }
 
 .bg-black{
-  background-color: #343a40;
+  background-color: $sidebar-color;
 }
+
+.title {
+  color: $white;
+}
+
+.text-white{
+  color: $white;
+} 
