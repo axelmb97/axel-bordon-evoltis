@@ -9,8 +9,8 @@ namespace Application.Receptions.Dtos
 {
     public class ReceptionFiltersDto
     {
-        [FromQuery(Name = "employee_id")]
-        public int? EmployeeId { get; set; }
+        [FromQuery(Name = "employee")]
+        public string? Employee { get; set; }
         [FromQuery(Name = "from")]
         public DateTime? From { get; set; }
         [FromQuery(Name = "to")]

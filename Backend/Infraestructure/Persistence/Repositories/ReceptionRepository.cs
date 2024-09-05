@@ -33,9 +33,10 @@ namespace Infraestructure.Persistence.Repositories
         {
             var query = _dbContext.Receptions.AsQueryable();
             query = query.Include(r => r.Employee);
-            if (filters.EmployeeId is not null && filters.EmployeeId > 0)
+            if (filters.Employee is not null && filters.Employee.Length > 0)
             {
-                query = query.Where(r => r.EmployeeEntityId.Equals(filters.EmployeeId));
+                query = query.Where(r => r.Employee.Name.ToLower().Contains(filters.Employee.ToLower())
+                                           || r.Employee.Lastname.ToLower().Contains(filters.Employee.ToLower()));
             }
 
             if (filters.From is not null && filters.To is not null)
