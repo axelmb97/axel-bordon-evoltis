@@ -43,7 +43,7 @@ namespace Infraestructure.Persistence.Repositories
         private IQueryable<PurchaseOrderEntity> GetQuery(PurchaseOrderFiltersDto filters)
         {
             var query = _dbContext.PurchaseOrders.AsQueryable();
-            query = query.Include(d => d.Supplier);
+            query = query.Include(d => d.Supplier).Where(p => p.Reception == null);
 
 
             if (filters.BusinessName is not null && filters.BusinessName.Length > 0)
