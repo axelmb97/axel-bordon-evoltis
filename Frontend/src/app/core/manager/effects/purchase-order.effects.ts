@@ -100,7 +100,6 @@ export class PurchaseOrderEffects {
             if (result instanceof Failure) {
               return (setPurchaseOrderError({error:result}));
             }
-            console.log(result);
             
             return loadedPurchaseOrderById({purchase: result})
           })

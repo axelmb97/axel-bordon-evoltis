@@ -61,9 +61,7 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
   override async updatePurchaseOrder(purchase: CreatePurchaseOrder): Promise<boolean | Failure> {
     try {
       return await this.purchaseOrderRemoteDataSource.updatePurchaseOrder(purchase);
-    } catch (error:any) {
-      console.log("ERRORRR", error);
-      
+    } catch (error:any) {      
       return new UnhandledFailure();
     }
   }

@@ -15,5 +15,5 @@ export abstract class PurchaseOrderFilters extends Entity implements GetFilterPa
   }
 
    abstract getPath(): string;
-
+   abstract clone() : PurchaseOrderFilters;
 }

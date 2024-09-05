@@ -1,6 +1,11 @@
 import { PurchaseOrderFilters } from "../../domain/entities/purchase-order-filters.entity";
 
 export class PurchaseOrderFiltersModel extends PurchaseOrderFilters {
+  override clone(): PurchaseOrderFilters {
+    let filters = new PurchaseOrderFiltersModel();
+    Object.assign(filters, this)
+    return filters;
+  }
 
   override getPath(): string {
     let path: string = `?page=${this.page!}&page_size=${this.pageSize!}`;

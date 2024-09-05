@@ -33,8 +33,7 @@ export class PurchaseOrderListComponent implements OnInit{
   ngOnInit(): void {
     this.initFilters();
     this.selectPurchaOrders();
-    this.store.dispatch(loadPurchaseOrders({filters: this.filters!}));
-
+    this.getPaginatedPurchaseOrders();
   }
 
   initFilters() : void {
@@ -48,6 +47,9 @@ export class PurchaseOrderListComponent implements OnInit{
     })
   }
 
+  getPaginatedPurchaseOrders() : void {
+    this.store.dispatch(loadPurchaseOrders({filters: this.filters!}));
+  }
 
   onAddPurchaseOrder() : void {
     this.router.navigate(['purchase-orders/add/general']);
@@ -55,7 +57,6 @@ export class PurchaseOrderListComponent implements OnInit{
 
   onUpdate(purchase: PurchaseOrderModel) : void {
     this.router.navigate(['purchase-orders',purchase.id,'general']);
-    console.log("PURCHASE UPDATE", purchase);
 
     this.store.dispatch(loadPurchaseOrderById({purchaseId: purchase.id!}));
   }
@@ -65,6 +66,8 @@ export class PurchaseOrderListComponent implements OnInit{
   }
 
   onPageChange(event: PaginatorState) {
-    
+    this.filters = this.filters?.clone();
+    this.filters!.page = event.page! + 1;
+    this.getPaginatedPurchaseOrders();
   }
 }
