@@ -1,12 +1,9 @@
 
 <section class="flex justify-content-center">
   <section class="w-35rem bg-white border-round-md shadow-1 p-4">
-    <article class="flex justify-content-between justify-content-center">
+    <article class="w-full">
       <div class="flex justify-content-center">
-        <h3>Ingrese datos de la orden</h3>
-      </div>
-      <div>
-        <p-button  label="Guardar" (onClick)="onSavePurchaseOrder()"></p-button>
+        <h3>Datos de la orden</h3>
       </div>
     </article>
     <article class="mt-4">
@@ -15,5 +12,8 @@
     <article>
       <router-outlet></router-outlet>
     </article>
+    <div class="flex justify-content-center pt-2">
+      <p-button  label="Guardar" (onClick)="onSavePurchaseOrder()"></p-button>
+    </div>
   </section>
 </section>

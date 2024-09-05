@@ -1,0 +1,10 @@
+.table {
+  overflow-y: scroll;
+  height: 13rem;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;  
+}
+
+.table::-webkit-scrollbar {
+  display: none; 
+}

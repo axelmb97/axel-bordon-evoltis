@@ -4,7 +4,7 @@
         <button pButton type="button" icon="pi pi-plus" size="small" class="p-button-success"
           (click)="addDetail()"></button>
     </article>
-    <article >
+    <article  class="table">
       <p-table [value]="currentPurchaseOrder?.details || []"  styleClass="p-datatable-sm">
         <ng-template pTemplate="header">
           <tr>
