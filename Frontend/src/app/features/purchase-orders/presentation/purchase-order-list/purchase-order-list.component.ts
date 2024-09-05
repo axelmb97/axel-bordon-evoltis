@@ -23,6 +23,7 @@ export class PurchaseOrderListComponent implements OnInit{
   first: number = 0;
   rows: number = 5;
   items?: MenuItem[];
+  showModal: boolean = false;
 
   constructor(
     private store: Store<AppState>,
@@ -55,9 +56,16 @@ export class PurchaseOrderListComponent implements OnInit{
     this.router.navigate(['purchase-orders/add/general']);
   }
 
+  onShowDetails(purchase: PurchaseOrderModel) : void {
+    this.showModal = true;
+    this.store.dispatch(loadPurchaseOrderById({purchaseId: purchase.id!}));
+  }
+
+  onCloseModal() : void {
+    this.showModal = false;
+  }
   onUpdate(purchase: PurchaseOrderModel) : void {
     this.router.navigate(['purchase-orders',purchase.id,'general']);
-
     this.store.dispatch(loadPurchaseOrderById({purchaseId: purchase.id!}));
   }
 

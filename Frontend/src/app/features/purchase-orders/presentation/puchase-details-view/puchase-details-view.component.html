@@ -1,0 +1,55 @@
+<section>
+  <section>
+    <article>
+      <div class="py-2">
+        <h4>Datos generales</h4>
+      </div>
+      <div class="mb-2">
+        <p>Proveedor: </p>
+        <p>{{getSupplierName(purchase?.supplierId!)}}</p>
+      </div>
+      <div>
+        <p>Fecha de llegada: </p>
+        <p>{{purchase?.deliveryDate! | formatDate}}</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="py-2">
+        <h4>Detalles</h4>
+      </div>
+      <div>
+        <p-table [value]="purchase?.details || []"  styleClass="p-datatable-sm">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Cantidad</th>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>TOTALES</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-purchase let-i="rowIndex">
+            <tr>
+              <td>
+                <p>{{ purchase.quantity}}</p>
+              </td>
+              <td>
+                <p>{{ getProductName(purchase.productId)}}</p>
+              </td>
+              <td>
+                <p>{{ purchase.priceByUnit}}</p>
+              </td>
+              <td>
+                <p>{{ purchase.priceByUnit * purchase.quantity}}</p>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+      <div class="flex justify-content-between pt-2">
+        <p>TOTAL</p>
+        <p class="pr-2">{{getPurchaseTotal()}}</p>
+      </div>
+    </article>
+  </section>
+</section>
