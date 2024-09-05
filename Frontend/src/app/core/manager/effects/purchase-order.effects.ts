@@ -13,12 +13,14 @@ import { PaginatedPurchaseOrderDetails } from "src/app/features/purchase-orders/
 import { GetPurchaseOrderByIdUseCase } from "src/app/features/purchase-orders/domain/usecases/get-purchase-order-by-id.usecase";
 import { PurchaseOrder } from "src/app/features/purchase-orders/domain/entities/purchase-order.entity";
 import { UpdatePurchaseOrderUseCase } from "src/app/features/purchase-orders/domain/usecases/update-purchase-order.usecase";
+import { PurchaseOrderFilters } from "src/app/features/purchase-orders/domain/entities/purchase-order-filters.entity";
+import { PurchaseOrderFiltersModel } from "src/app/features/purchase-orders/data/models/purchase-order-filters.model";
 
 
 
 @Injectable()
 export class PurchaseOrderEffects {
-
+  private filters: PurchaseOrderFilters = new PurchaseOrderFiltersModel();
   constructor(
     private actions$: Actions,
     private getPaginatedPurchaseOrdersUseCase: GetPaginatedPurchaseOrdersUseCase,
@@ -68,7 +70,8 @@ export class PurchaseOrderEffects {
             if (result instanceof Failure) {
               return (setPurchaseOrderError({error:result}));
             }
-            return setPurchaseOrderSuccess({message: "Se elimino la orden de compra exitosamente"}) 
+            let filters
+            return (setPurchaseOrderSuccess({message: "Se elimino la orden de compra exitosamente"}),loadPurchaseOrders({filters: this.filters}))
           })
         )
       )

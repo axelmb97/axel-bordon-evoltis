@@ -25,6 +25,7 @@ export class PurchaseOrderListComponent implements OnInit{
   items?: MenuItem[];
   showModal: boolean = false;
   showFilters: boolean = false;
+
   constructor(
     private store: Store<AppState>,
     private router: Router,
