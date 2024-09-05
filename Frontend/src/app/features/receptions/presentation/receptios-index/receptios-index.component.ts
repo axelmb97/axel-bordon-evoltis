@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { MessageService } from 'primeng/api';
 import { AppState } from 'src/app/core/manager/app.state';
+import { selectPurchaseOrderError } from 'src/app/core/manager/selectors/purchase-order.selectors';
+import { selectReceptionSuccess } from 'src/app/core/manager/selectors/reception.selectors';
 
 @Component({
   selector: 'app-receptios-index',
@@ -17,14 +19,12 @@ export class ReceptiosIndexComponent implements OnInit{
     private router: Router){}
 
   ngOnInit(): void {
-    //TODO: HACER ACCION PARA SELECCIONAR ERROR Y SUCCES DE RECEPTION
     this.selectPurchaseSuccess();
     this.selectPurchaseError();
-
   }
-  //HACER ACCION PARA SELECIONAR RECEPTIONS
+
   selectPurchaseSuccess() : void {
-    this.store.select().subscribe(message => {
+    this.store.select(selectReceptionSuccess).subscribe(message => {
       if (message.length == 0) return;
       
       this.messageService.add({
@@ -33,8 +33,8 @@ export class ReceptiosIndexComponent implements OnInit{
         summary: 'Éxito',
         detail: message
       });
-      //TODO HACER ACCION PARA LIMPIAR ORDERN
-      this.store.dispatch(cleanOrder());
+      //TODO HACER ACCION PARA LIMPIAR RECEPTION
+      // this.store.dispatch(cleanOrder());
       this.redirectToPurchaseOrderList();
     })
   }

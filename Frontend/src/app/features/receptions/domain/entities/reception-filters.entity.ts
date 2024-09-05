@@ -1,7 +1,8 @@
+import { Clone } from "src/app/core/utils/clone";
 import { Entity } from "src/app/core/utils/entity";
 import { GetFilterPath } from "src/app/core/utils/get-path";
 
-export abstract class ReceptionFilters extends Entity implements GetFilterPath {
+export abstract class ReceptionFilters extends Entity implements GetFilterPath, Clone<ReceptionFilters> {
 
   constructor(
     public page: number = 1,
@@ -12,6 +13,7 @@ export abstract class ReceptionFilters extends Entity implements GetFilterPath {
   ) {
     super();
   }
+  abstract clone(): ReceptionFilters;
   abstract getPath(): string;
 
 }

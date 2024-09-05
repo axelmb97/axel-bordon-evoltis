@@ -52,6 +52,7 @@ import { ReceptionRemoteDataSource, ReceptionRemoteDataSourceBase } from './feat
 import { ReceptionRepositoryBase } from './features/receptions/domain/repositories/reception-base.repository';
 import { ReceptionRepository } from './features/receptions/data/repositories/reception.repository';
 import { GetPaginatedReceptionsUseCase } from './features/receptions/domain/usecases/get-paginated-receptions.usecase';
+import { ReceptionEffects } from './core/manager/effects/reception.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +76,7 @@ import { GetPaginatedReceptionsUseCase } from './features/receptions/domain/usec
     SharedModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({name: 'TEST'}),
-    EffectsModule.forRoot([EmployeeEffects, ProductEffects, SupplierEffects, PurchaseOrderEffects])
+    EffectsModule.forRoot([EmployeeEffects, ProductEffects, SupplierEffects, PurchaseOrderEffects,ReceptionEffects])
   ],
   providers: [
     {provide: HttpServiceBase, useClass: HttpService},

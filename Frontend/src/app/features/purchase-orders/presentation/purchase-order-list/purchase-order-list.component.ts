@@ -22,7 +22,6 @@ export class PurchaseOrderListComponent implements OnInit{
   filters?: PurchaseOrderFilters;
   first: number = 0;
   rows: number = 5;
-  items?: MenuItem[];
   showModal: boolean = false;
   showFilters: boolean = false;
 
