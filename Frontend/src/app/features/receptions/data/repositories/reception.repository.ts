@@ -6,6 +6,7 @@ import { ReceptionFilters } from "../../domain/entities/reception-filters.entity
 import { ReceptionRemoteDataSourceBase } from "../data-sources/reception-remote.datasource";
 import { UnhandledFailure } from "src/app/core/failures/unhandled.failure";
 import { Reception } from "../../domain/entities/reception.entity";
+import { CreateReception } from "../../domain/entities/create-reception.entity";
 
 @Injectable()
 export class ReceptionRepository extends ReceptionRepositoryBase {
@@ -26,9 +27,28 @@ export class ReceptionRepository extends ReceptionRepositoryBase {
     try {
       return await this.receptionDataSource.getReceptionById(receptionId);
     } catch (error:any) {
+      return new UnhandledFailure();
+    }
+  }
+
+  override async createReception(reception: CreateReception): Promise<boolean | Failure> {
+    try {
+      return await this.receptionDataSource.createReception(reception);
+    } catch (error:any) {
       console.log("ERROR", error);
       
       return new UnhandledFailure();
     }
   }
+
+  override async deleteReception(receptionId: number): Promise<boolean | Failure> {
+     try {
+      return await this.receptionDataSource.deleteReception(receptionId);
+    } catch (error:any) {
+      console.log("ERROR", error);
+      
+      return new UnhandledFailure();
+    }
+  }
+ 
 }

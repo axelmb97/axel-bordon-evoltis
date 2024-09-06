@@ -8,6 +8,8 @@ import { PurchaseGeneralDataComponent } from './features/purchase-orders/present
 import { PurchaseDetailsComponent } from './features/purchase-orders/presentation/purchase-details/purchase-details.component';
 import { ReceptiosIndexComponent } from './features/receptions/presentation/receptios-index/receptios-index.component';
 import { ReceptionsListComponent } from './features/receptions/presentation/receptions-list/receptions-list.component';
+import { StocksIndexComponent } from './features/stock/presentation/stocks-index/stocks-index.component';
+import { StocksListComponent } from './features/stock/presentation/stocks-list/stocks-list.component';
 
 const routes: Routes = [
   {
@@ -38,6 +40,13 @@ const routes: Routes = [
     component: ReceptiosIndexComponent,
     children: [
       {path: '', component: ReceptionsListComponent},
+    ]
+  },
+  {
+    path: 'stocks',
+    component: StocksIndexComponent,
+    children: [
+      {path: '', component: StocksListComponent},
     ]
   },
   {

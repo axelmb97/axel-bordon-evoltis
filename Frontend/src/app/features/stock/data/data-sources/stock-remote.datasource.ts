@@ -4,6 +4,7 @@ import { StockFilters } from "../../domain/entities/stock-filters.entity";
 import { environment } from "src/environments/environment.development";
 import { HttpService } from "src/app/core/services/http-service.implementation";
 import { PaginatedStockModel } from "../models/paginated-stock.model";
+import { HttpServiceBase } from "src/app/core/services/http-service.base";
 
 export abstract class StockRemoteDataSourceBase {
   abstract getPaginatedStocks(filters: StockFilters) : Promise<PaginatedStock>;
@@ -13,7 +14,7 @@ export abstract class StockRemoteDataSourceBase {
 export class StockRemoteDataSource extends StockRemoteDataSourceBase {
   private url: string = `${environment.apiUrl}/api/stocks`
 
-  constructor(private httpService: HttpService){
+  constructor(private httpService: HttpServiceBase){
     super();
   }
 

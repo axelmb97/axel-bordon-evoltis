@@ -15,8 +15,10 @@ export class stockRepository extends StockRepositoryBase {
 
   override async getPaginatedStocks(filters: StockFilters): Promise<PaginatedStock | Failure> {
     try {
-      return this.stockDataSource.getPaginatedStocks(filters);
+      return await this.stockDataSource.getPaginatedStocks(filters);
     } catch (error:any) {
+      console.log("ERROR", error);
+      
       return new UnhandledFailure();
     }
   }
