@@ -1,0 +1,14 @@
+.w-35rem {
+  width: 35rem;
+}
+
+.form-container {
+  height: 22rem;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;  
+}
+
+.form-container::-webkit-scrollbar {
+  display: none; 
+}

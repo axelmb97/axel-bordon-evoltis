@@ -32,7 +32,7 @@ export const receptionReducers = createReducer(
     return {...state, loading: true}
   }),
   on(ReceptionActions.loadedReceptionById, (state, prop) => {
-    return {...state, loading: true, receptionById: prop.reception}
+    return {...state, loading: false, receptionById: prop.reception}
   }),
   on(ReceptionActions.createReception, (state, prop) => {
     return {...state, loading: true, currentReception: prop.reception}

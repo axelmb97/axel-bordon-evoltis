@@ -8,6 +8,7 @@ import { selectReceptionFilters, selectReceptionPagination } from 'src/app/core/
 import { loadReceptionById, loadReceptions } from 'src/app/core/manager/actions/receptions.actions';
 import { Reception } from '../../domain/entities/reception.entity';
 import { PaginatorState } from 'primeng/paginator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-receptions-list',
@@ -22,7 +23,8 @@ export class ReceptionsListComponent implements OnInit{
   showModal: boolean = false;
 
   constructor(
-    private store: Store<AppState>
+    private store: Store<AppState>,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -55,7 +57,7 @@ export class ReceptionsListComponent implements OnInit{
   }
 
   onAddPurchaseOrder() : void {
-
+    this.router.navigate(['receptions/add']);
   }
   
   onShowDetails(reception: Reception) : void {

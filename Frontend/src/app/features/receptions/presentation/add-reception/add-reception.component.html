@@ -1,0 +1,60 @@
+<section class="flex justify-content-center">
+  <section class="w-full h-30rem bg-white border-round-md shadow-1 p-4">
+    <article >
+      <div class="flex justify-content-center">
+        <h3>Datos de la Recepción</h3>
+      </div>
+    </article>
+    <article class="form-container">
+      <form [formGroup]="receptionForm" class="p-2">
+        <article class="flex justify-content-between">
+          <article class="mb-2 w-full pr-4">
+            <div class="py-2">
+              <p>Empleado</p>
+            </div>
+            <p-dropdown formControlName="employeeId"  [style]="{width: '100%'}"  [options]="employees" optionLabel="name" optionValue="id" placeholder="Seleccione un empleado"></p-dropdown>
+          </article>
+          <article class="mb-2 w-full">
+            <div class="py-2">
+              <p>Ingrese código de órden</p>
+            </div>
+              <p-inputNumber [style]="{width: '100%'}" formControlName="purchaseId"  [min]="1" > </p-inputNumber>
+          </article>
+        </article>
+        <article>
+          <p-table [value]="getDetails().controls" formArrayName="details"   styleClass="p-datatable-sm">
+            <ng-template pTemplate="header">
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad acordada</th>
+                <th>Cantidad recibida</th>
+                <th>Obervación</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-detail let-i="rowIndex">
+              <tr [formGroupName]="i">
+                <td>
+                  <p>{{ getProductName(detail.get('productId')?.value)}}</p>
+                </td>
+                <td>
+                  <p>{{detail.get('quantity')?.value}}</p>
+                </td>
+                <td>
+                  <p-inputNumber  formControlName="quantityRecevied"  [min]="1" > </p-inputNumber>
+                </td>
+                <td>
+                  <input type="text" pInputText  formControlName="description"/>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        
+        </article>
+      </form>
+      
+    </article>
+    <div class="flex justify-content-end">
+      <p-button  label="Guardar" (onClick)="onSaveReception()"></p-button>
+    </div>
+  </section>
+</section>

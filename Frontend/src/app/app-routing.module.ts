@@ -10,6 +10,7 @@ import { ReceptiosIndexComponent } from './features/receptions/presentation/rece
 import { ReceptionsListComponent } from './features/receptions/presentation/receptions-list/receptions-list.component';
 import { StocksIndexComponent } from './features/stock/presentation/stocks-index/stocks-index.component';
 import { StocksListComponent } from './features/stock/presentation/stocks-list/stocks-list.component';
+import { AddReceptionComponent } from './features/receptions/presentation/add-reception/add-reception.component';
 
 const routes: Routes = [
   {
@@ -40,13 +41,14 @@ const routes: Routes = [
     component: ReceptiosIndexComponent,
     children: [
       {path: '', component: ReceptionsListComponent},
+      {path: 'add', component: AddReceptionComponent},
     ]
   },
   {
     path: 'stocks',
     component: StocksIndexComponent,
     children: [
-      {path: '', component: StocksListComponent},
+      {path: '', component: StocksListComponent}
     ]
   },
   {
