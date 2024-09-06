@@ -1,0 +1,32 @@
+<section  class="w-full h-full relative">
+  <section class="w-full h-full">
+    <article class="filters">
+      <form [formGroup]="filtersForm">
+        <div class="card flex justify-content-center mb-2">
+          <div class="flex flex-column w-full">
+              <label  class="pb-1">Producto</label>
+              <input formControlName="product" pInputText/>
+          </div>
+        </div>
+        <div class="card flex justify-content-center mb-2">
+          <div class="flex flex-column w-full">
+              <label  class="pb-1">Cantidad minima</label>
+              <p-inputNumber formControlName="quantityGreaterThan"  [min]="0" > </p-inputNumber>
+          </div>
+        </div>
+        <div class="card flex justify-content-center mb-2">
+          <div class="flex flex-column w-full">
+              <label class="pb-1">Cantidad máxima</label>
+              <p-inputNumber formControlName="quantityLessThan" [min]="0" > </p-inputNumber>
+          </div>
+        </div>
+      </form>
+    </article>
+    <article class="flex justify-content-between">
+      <p-button label="Limpiar" (onClick)="onCleanFilters()"></p-button>
+      <p-button label="FILTRAR" (onClick)="onFilter()"></p-button>
+    </article>
+  </section>
+ 
+</section>
+

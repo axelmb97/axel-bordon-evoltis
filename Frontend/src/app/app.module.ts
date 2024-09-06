@@ -65,6 +65,7 @@ import { StocksListComponent } from './features/stock/presentation/stocks-list/s
 import { CreateReceptionUseCase } from './features/receptions/domain/usecases/create-reception.usecase';
 import { DeleteReceptionUseCase } from './features/receptions/domain/usecases/delete-reception.usecase';
 import { AddReceptionComponent } from './features/receptions/presentation/add-reception/add-reception.component';
+import { StockFiltersComponent } from './features/stock/presentation/stock-filters/stock-filters.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +84,8 @@ import { AddReceptionComponent } from './features/receptions/presentation/add-re
     ReceptionDetailsViewComponent,
     StocksIndexComponent,
     StocksListComponent,
-    AddReceptionComponent
+    AddReceptionComponent,
+    StockFiltersComponent
   ],
   imports: [
     BrowserModule,

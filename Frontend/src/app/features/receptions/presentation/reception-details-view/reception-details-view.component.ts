@@ -20,7 +20,6 @@ export class ReceptionDetailsViewComponent implements OnInit{
 
   selectReception() : void {
     this.store.select(selectReceptionById).subscribe(reception => {
-      console.log(reception);
       
       this.reception = reception;
     });

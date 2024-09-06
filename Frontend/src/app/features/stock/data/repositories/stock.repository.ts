@@ -17,7 +17,6 @@ export class stockRepository extends StockRepositoryBase {
     try {
       return await this.stockDataSource.getPaginatedStocks(filters);
     } catch (error:any) {
-      console.log("ERROR", error);
       
       return new UnhandledFailure();
     }

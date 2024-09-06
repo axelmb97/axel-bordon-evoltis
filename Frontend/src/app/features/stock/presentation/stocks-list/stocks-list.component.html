@@ -2,7 +2,10 @@
   <section class="w-full">
     <article class="flex justify-content-between py-3">
       <div>
-        <button pButton type="button" icon="pi pi-filter" label="Filtrar" size="small"></button>
+        <button pButton type="button" icon="pi pi-filter" label="Filtrar" size="small" (click)="onShowFilters()"></button>
+        <app-filters [showFilters]="showFilters" (closeModal)="onCloseFilters()">
+          <app-stock-filters></app-stock-filters>
+        </app-filters>
       </div>
     </article>
     <article >

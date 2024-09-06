@@ -8,13 +8,15 @@ export class StockFiltersModel extends StockFilters {
       url += `&product_name=${this.productName}`
     }
 
-    if (this.quantityGreaterThan != undefined) {
-      url += `&quantity_greater_than=${this.quantityGreaterThan}`
+    if (this.quantityGreaterThan != undefined &&  this.quantityGreaterThan > 0) {
+      url += `&quantity_greater_than=${this.quantityGreaterThan}`;
+
+      if (this.quantityLessThan != undefined &&  this.quantityGreaterThan < this.quantityLessThan) {
+        url += `&quantity_less_than=${this.quantityLessThan}`
+      }
     }
 
-    if (this.quantityLessThan != undefined) {
-      url += `&quantity_less_than=${this.quantityLessThan}`
-    }
+   
     return url;
   }
   override clone(): StockFilters {

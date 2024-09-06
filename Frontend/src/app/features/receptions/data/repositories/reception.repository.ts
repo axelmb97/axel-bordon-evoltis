@@ -35,7 +35,6 @@ export class ReceptionRepository extends ReceptionRepositoryBase {
     try {
       return await this.receptionDataSource.createReception(reception);
     } catch (error:any) {
-      console.log("ERROR", error);
       
       return new UnhandledFailure();
     }
@@ -45,7 +44,6 @@ export class ReceptionRepository extends ReceptionRepositoryBase {
      try {
       return await this.receptionDataSource.deleteReception(receptionId);
     } catch (error:any) {
-      console.log("ERROR", error);
       
       return new UnhandledFailure();
     }

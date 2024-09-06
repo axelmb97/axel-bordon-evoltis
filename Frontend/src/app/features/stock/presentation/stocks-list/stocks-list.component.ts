@@ -19,6 +19,7 @@ export class StocksListComponent implements OnInit{
   first: number = 0;
   rows: number = 5;
   showModal: boolean = false;
+  showFilters: boolean = false;
 
   constructor(
     private store: Store<AppState>
@@ -61,5 +62,13 @@ export class StocksListComponent implements OnInit{
 
   onCloseModal() : void {
     this.showModal = false;
+  }
+
+  onShowFilters() : void {
+    this.showFilters = true;
+  }
+
+  onCloseFilters() : void {
+    this.showFilters = false;
   }
 }
