@@ -55,6 +55,10 @@ import { GetPaginatedReceptionsUseCase } from './features/receptions/domain/usec
 import { ReceptionEffects } from './core/manager/effects/reception.effects';
 import { GetReceptionByIdUseCase } from './features/receptions/domain/usecases/get-reception-by-id.usecase';
 import { ReceptionDetailsViewComponent } from './features/receptions/presentation/reception-details-view/reception-details-view.component';
+import { StockRemoteDataSource, StockRemoteDataSourceBase } from './features/stock/data/data-sources/stock-remote.datasource';
+import { StockRepositoryBase } from './features/stock/domain/repositories/stock-base.repository';
+import { stockRepository } from './features/stock/data/repositories/stock.repository';
+import { GetPaginatedStocksUseCase } from './features/stock/domain/usecases/get-paginated-stocks.usecase';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +102,10 @@ import { ReceptionDetailsViewComponent } from './features/receptions/presentatio
     GetPaginatedPurchaseOrderDetailsUseCase, GetPurchaseOrderByIdUseCase, UpdatePurchaseOrderUseCase,
     {provide: ReceptionRemoteDataSourceBase, useClass: ReceptionRemoteDataSource},
     {provide: ReceptionRepositoryBase, useClass: ReceptionRepository},
-    GetPaginatedReceptionsUseCase, GetReceptionByIdUseCase
+    GetPaginatedReceptionsUseCase, GetReceptionByIdUseCase,
+    {provide: StockRemoteDataSourceBase, useClass: StockRemoteDataSource},
+    {provide: StockRepositoryBase, useClass: stockRepository},
+    GetPaginatedStocksUseCase
   ],
   bootstrap: [AppComponent]
 })
