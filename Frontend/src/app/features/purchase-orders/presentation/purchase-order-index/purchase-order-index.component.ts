@@ -48,6 +48,8 @@ export class PurchaseOrderIndexComponent implements OnInit{
 
   selectPurchaseError() : void {
     this.store.select(selectPurchaseOrderError).subscribe( error => {
+      console.log("ERROR", error);
+      
       if (!error) return;
       this.messageService.add({
         severity: 'error',

@@ -10,6 +10,8 @@ import { CreatePurchaseOrder } from "../../domain/entities/create-purchase-order
 import { PaginatedPurchaseOrderDetails } from "../../domain/entities/paginated-purchase-order-details.entity";
 import { PurchaseOrderDetailFilters } from "../../domain/entities/purchase-order-deatil-filters.entoty";
 import { PurchaseOrder } from "../../domain/entities/purchase-order.entity";
+import { NotFoundFailure } from "src/app/core/failures/not-found-failure";
+import { BadRequestFailure } from "src/app/core/failures/bad-request.failure";
 
 @Injectable()
 export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
@@ -22,6 +24,10 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
     try {
       return await this.purchaseOrderRemoteDataSource.getPaginatedPurchaseOrders(filters);
     } catch (error:any) {
+      let response: any = error.error
+      if (response.status_code == 400) {
+        return new BadRequestFailure(response.message);
+      }
       return new UnhandledFailure();
     }
   }
@@ -30,6 +36,10 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
     try {
       return await this.purchaseOrderRemoteDataSource.createPurchaseOrder(purchaseOrder);
     } catch (error:any) {
+      let response: any = error.error
+      if (response.status_code == 400) {
+        return new BadRequestFailure(response.message);
+      }
       return new UnhandledFailure();
     }
   }
@@ -38,6 +48,15 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
     try {
       return await this.purchaseOrderRemoteDataSource.deletePurchseOrder(purchaseOrderId);
     } catch (error:any) {
+
+      let response: any = error.error
+      if (response.status_code == 404) {
+        return new NotFoundFailure(response.message);
+      }
+      if (response.status_code == 400) {
+        return new BadRequestFailure(response.message);
+      }
+      
       return new UnhandledFailure();
     }
   }
@@ -46,6 +65,10 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
     try {
       return await this.purchaseOrderRemoteDataSource.getPaginatedPurchaseOrderDetails(filters);
     } catch (error:any) {
+      let response: any = error.error
+      if (response.status_code == 400) {
+        return new BadRequestFailure(response.message);
+      }
       return new UnhandledFailure();
     }
   }
@@ -54,6 +77,10 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
     try {
       return await this.purchaseOrderRemoteDataSource.getPurchaseOrderById(purchaseId);
     } catch (error:any) {
+      let response: any = error.error
+      if (response.status_code == 404) {
+        return new NotFoundFailure(response.message);
+      }
       return new UnhandledFailure();
     }
   }
@@ -61,7 +88,11 @@ export class PurchaseOrderRepository extends PurchaseOrderRepositoryBase {
   override async updatePurchaseOrder(purchase: CreatePurchaseOrder): Promise<boolean | Failure> {
     try {
       return await this.purchaseOrderRemoteDataSource.updatePurchaseOrder(purchase);
-    } catch (error:any) {      
+    } catch (error:any) {   
+      let response: any = error.error
+      if (response.status_code == 404) {
+        return new NotFoundFailure(response.message);
+      }
       return new UnhandledFailure();
     }
   }
