@@ -14,32 +14,10 @@ export class StocksIndexComponent implements OnInit {
   constructor(
     private store: Store<AppState>,
     private messageService: MessageService,
-    private router: Router){}
+    ){}
 
   ngOnInit(): void {
-    this.selectStockSuccess();
     this.selectStockError();
-  }
-
-  selectStockSuccess() : void {
-    this.store.select(selectStockSucces).subscribe(message => {
-      if (message.length == 0) return;
-      
-      this.messageService.add({
-        severity: 'success',
-        life: 3000,
-        summary: 'Éxito',
-        detail: message
-      });
-
-      this.redirectToStockList();
-    })
-  }
-
-  redirectToStockList() : void {
-    setTimeout(() => {
-      this.router.navigate(['stocks']);
-    }, 3000);
   }
 
   selectStockError() : void {
