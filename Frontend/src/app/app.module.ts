@@ -59,6 +59,7 @@ import { StockRemoteDataSource, StockRemoteDataSourceBase } from './features/sto
 import { StockRepositoryBase } from './features/stock/domain/repositories/stock-base.repository';
 import { stockRepository } from './features/stock/data/repositories/stock.repository';
 import { GetPaginatedStocksUseCase } from './features/stock/domain/usecases/get-paginated-stocks.usecase';
+import { StockEffects } from './core/manager/effects/stock.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +84,7 @@ import { GetPaginatedStocksUseCase } from './features/stock/domain/usecases/get-
     SharedModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({name: 'TEST'}),
-    EffectsModule.forRoot([EmployeeEffects, ProductEffects, SupplierEffects, PurchaseOrderEffects,ReceptionEffects])
+    EffectsModule.forRoot([EmployeeEffects, ProductEffects, SupplierEffects, PurchaseOrderEffects,ReceptionEffects,StockEffects])
   ],
   providers: [
     {provide: HttpServiceBase, useClass: HttpService},

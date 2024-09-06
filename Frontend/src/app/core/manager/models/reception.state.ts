@@ -7,7 +7,6 @@ export interface ReceptionsState {
   loading: boolean;
   filters?: ReceptionFilters;
   receptionsPagination?: PaginatedReceptions;
-  // currentPurchase?: CreatePurchaseOrder;
   receptionById?: Reception;
   error?: Failure;
   success: string;

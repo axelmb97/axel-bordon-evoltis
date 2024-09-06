@@ -9,6 +9,8 @@ import { PurchaseOrdersState } from "./models/purchase-orders.state";
 import { purchaseOrderReducers } from "./reducers/purchase-order.reducers";
 import { ReceptionsState } from "./models/reception.state";
 import { receptionReducers } from "./reducers/reception.reduces";
+import { SotcksState } from "./models/stock.state";
+import { stockReducers } from "./reducers/stock.reducers";
 
 
 
@@ -17,7 +19,8 @@ export interface AppState {
   suppliers: SuppliersState;
   products: ProductsState;
   purchases: PurchaseOrdersState;
-  receptions: ReceptionsState
+  receptions: ReceptionsState;
+  stocks: SotcksState;
 }
 
 export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
@@ -25,5 +28,6 @@ export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
   suppliers: suppliersReducers,
   products: productsReducers,
   purchases: purchaseOrderReducers,
-  receptions: receptionReducers
+  receptions: receptionReducers,
+  stocks: stockReducers
 }
