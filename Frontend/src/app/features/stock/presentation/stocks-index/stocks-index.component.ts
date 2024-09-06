@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { MessageService } from 'primeng/api';
 import { AppState } from 'src/app/core/manager/app.state';
+import { selectStockError, selectStockSucces } from 'src/app/core/manager/selectors/stock.selectors';
 
 @Component({
   selector: 'app-stocks-index',
@@ -16,12 +17,12 @@ export class StocksIndexComponent implements OnInit {
     private router: Router){}
 
   ngOnInit(): void {
-    this.selectPurchaseSuccess();
-    this.selectPurchaseError();
+    this.selectStockSuccess();
+    this.selectStockError();
   }
 
   selectStockSuccess() : void {
-    this.store.select(selectStock).subscribe(message => {
+    this.store.select(selectStockSucces).subscribe(message => {
       if (message.length == 0) return;
       
       this.messageService.add({
@@ -30,20 +31,19 @@ export class StocksIndexComponent implements OnInit {
         summary: 'Éxito',
         detail: message
       });
-      //TODO HACER ACCION PARA LIMPIAR RECEPTION
-      // this.store.dispatch(cleanOrder());
-      this.redirectToPurchaseOrderList();
+
+      this.redirectToStockList();
     })
   }
 
-  redirectToPurchaseOrderList() : void {
+  redirectToStockList() : void {
     setTimeout(() => {
-      this.router.navigate(['receptions']);
+      this.router.navigate(['stocks']);
     }, 3000);
   }
 
-  selectPurchaseError() : void {
-    this.store.select(selectPurchaseOrderError).subscribe( error => {
+  selectStockError() : void {
+    this.store.select(selectStockError).subscribe( error => {
 
       if (!error) return;
       this.messageService.add({
