@@ -2,6 +2,7 @@
 using Application.Receptions.Commands.DeleteReception;
 using Application.Receptions.Commands.UpdateReception;
 using Application.Receptions.Queries.GetFilteredReceptions;
+using Application.Receptions.Queries.GetReceptionById;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,13 @@ namespace Presentation.Controllers
             return StatusCode(result.StatusCode, result);
         }
 
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetFilteredReceptions([FromRoute] GetReceptionByIdQuery query)
+        {
+            var result = await _mediator.Send(query);
+            return StatusCode(result.StatusCode, result);
+        }
 
         [HttpPost]
         public async Task<IActionResult> PostReception([FromBody] CreateReceptionCommand command)

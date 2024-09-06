@@ -74,7 +74,8 @@ namespace Infraestructure.Persistence.Repositories
 
         public async Task<ReceptionEntity> GetReceptionById(int id)
         {
-            return await _dbContext.Receptions.Include(r => r.Details).FirstOrDefaultAsync(r => r.Id.Equals(id));
+            return await _dbContext.Receptions.Include(r => r.Details).ThenInclude(d => d.Product)
+                .Include(r => r.Employee).FirstOrDefaultAsync(r => r.Id.Equals(id));
         }
 
         public async Task Delete(ReceptionEntity reception)
