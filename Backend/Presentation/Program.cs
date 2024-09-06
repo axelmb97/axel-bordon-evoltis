@@ -21,10 +21,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddDbContext<InventoryDBContext>(options =>
-//{
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-//});
 
 builder.Services.AddDbContext<InventoryDBContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
