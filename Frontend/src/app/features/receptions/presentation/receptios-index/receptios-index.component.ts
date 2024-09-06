@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { MessageService } from 'primeng/api';
+import { clearReception } from 'src/app/core/manager/actions/receptions.actions';
 import { AppState } from 'src/app/core/manager/app.state';
 import { selectPurchaseOrderError } from 'src/app/core/manager/selectors/purchase-order.selectors';
 import { selectReceptionError, selectReceptionSuccess } from 'src/app/core/manager/selectors/reception.selectors';
@@ -33,7 +34,7 @@ export class ReceptiosIndexComponent implements OnInit{
         summary: 'Éxito',
         detail: message
       });
-
+      this.store.dispatch(clearReception());
       this.redirectToReceptionList();
     })
   }

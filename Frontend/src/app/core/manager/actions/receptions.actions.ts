@@ -45,3 +45,7 @@ export const deleteReception = createAction(
   ReceptionActionName.DELETE_RECEPTION,
   props<{receptionId: number}>()
 );
+
+export const clearReception = createAction(
+  ReceptionActionName.CLEAN_RECEPTION
+);

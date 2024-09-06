@@ -39,5 +39,8 @@ export const receptionReducers = createReducer(
   }),
   on(ReceptionActions.deleteReception, (state) => {
     return {...state, loading: true}
+  }),
+  on(ReceptionActions.clearReception, (state)=> {
+    return {...state, success: '', currentReception: undefined}
   })
 );
